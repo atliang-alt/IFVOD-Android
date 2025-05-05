@@ -31,7 +31,6 @@ import com.cqcsy.library.bean.UserInfoBean
 import com.cqcsy.library.utils.Constant
 import com.cqcsy.library.utils.GlobalValue
 import com.cqcsy.library.views.TipsDialog
-import com.cqcsy.music.utils.PagerTabPresenter
 import kotlinx.android.synthetic.main.layout_video_details.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -49,7 +48,6 @@ class VideoPlayVerticalActivity : VideoBaseActivity(), OnClickListener {
     // 是否需要刷新推荐数据
     private var refreshRecommendView = false
 
-    private val mTabPresenter: PagerTabPresenter by lazy { PagerTabPresenter(detail_tabs, detail_pager) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -164,62 +162,7 @@ class VideoPlayVerticalActivity : VideoBaseActivity(), OnClickListener {
         if (!isEnableComment()) {
             tabItems.removeLast()
         }
-        mTabPresenter.attach(this, tabItems.toTypedArray(), object : PagerTabPresenter.OnCreateFragment {
-            override fun onCreate(position: Int): Fragment {
-                return when (position) {
-                    2 -> {
-                        createComment()
-                    }
-
-                    1 -> {
-                        if (isEnableChat()) {
-                            createChat()
-                        } else {
-                            createComment()
-                        }
-                    }
-
-                    else -> {
-                        createIntro()
-                    }
-                }
-            }
-
-            override fun createCustomerView(tabText: String): View? {
-                val tabItem = LayoutInflater.from(this@VideoPlayVerticalActivity).inflate(R.layout.layout_tab_number, null)
-                val textView = tabItem.findViewById<TextView>(R.id.tab_text)
-                val number = tabItem.findViewById<TextView>(R.id.tab_number)
-                textView.text = tabText
-                textView.setTextColor(getNormalColor())
-                number.setTextColor(getNormalColor())
-                return tabItem
-            }
-
-            override fun onPageSelected(index: Int) {
-                super.onPageSelected(index)
-                val tab = mTabPresenter.tab.getTabAt(index)
-                val textView = tab?.customView?.findViewById<TextView>(R.id.tab_text)
-                val number = tab?.customView?.findViewById<TextView>(R.id.tab_number)
-                val indicator = tab?.customView?.findViewById<View>(R.id.tab_indicator)
-                textView?.setTextColor(getSelectColor())
-                textView?.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD)
-                number?.setTextColor(getSelectColor())
-                indicator?.isVisible = true
-            }
-
-            override fun onPageUnSelected(index: Int) {
-                super.onPageUnSelected(index)
-                val tab = mTabPresenter.tab.getTabAt(index)
-                val textView = tab?.customView?.findViewById<TextView>(R.id.tab_text)
-                val number = tab?.customView?.findViewById<TextView>(R.id.tab_number)
-                val indicator = tab?.customView?.findViewById<View>(R.id.tab_indicator)
-                textView?.setTextColor(getNormalColor())
-                textView?.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL)
-                number?.setTextColor(getNormalColor())
-                indicator?.isVisible = false
-            }
-
-        }, getDefaultTab())
+       
     }
 
     private fun createIntro(): Fragment {

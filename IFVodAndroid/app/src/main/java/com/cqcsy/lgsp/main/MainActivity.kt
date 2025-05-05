@@ -34,7 +34,6 @@ import com.cqcsy.lgsp.main.vip.VIPFragment
 import com.cqcsy.lgsp.main.vip.VIPIntroActivity
 import com.cqcsy.lgsp.medialoader.ChooseMode
 import com.cqcsy.lgsp.medialoader.MediaType
-import com.cqcsy.music.ui.main.MusicHomeFragment
 import com.cqcsy.lgsp.offline.OfflineActivity
 import com.cqcsy.lgsp.receiver.ActiveReceiver
 import com.cqcsy.lgsp.record.RecordActivity
@@ -66,10 +65,6 @@ import com.cqcsy.library.utils.Constant
 import com.cqcsy.library.utils.GlobalValue
 import com.cqcsy.library.utils.StatusBarUtil
 import com.cqcsy.library.views.TipsDialog
-import com.cqcsy.music.database.PlayListMgr
-import com.cqcsy.music.player.PlayerManager
-import com.cqcsy.music.service.PlayerService
-import com.cqcsy.music.viewmodel.SongViewModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.lzy.okgo.model.HttpParams
@@ -228,7 +223,6 @@ class MainActivity : BaseActivity(), NetworkUtils.OnNetworkStatusChangedListener
     private fun setBottomCheck() {
         button_home.setOnTouchListener(this)
         button_find.setOnTouchListener(this)
-        button_music.setOnTouchListener(this)
         button_hot.setOnTouchListener(this)
         button_mine.setOnTouchListener(this)
         button_vip.setOnClickListener {
@@ -261,7 +255,6 @@ class MainActivity : BaseActivity(), NetworkUtils.OnNetworkStatusChangedListener
                 R.id.button_home -> fragment = HomeFragment()
                 R.id.button_find -> fragment = FindFragment()
                 R.id.button_vip -> fragment = VIPFragment()
-                R.id.button_music -> fragment = MusicHomeFragment()
                 R.id.button_hot -> fragment = HotFragment()
                 R.id.button_mine -> fragment = MineFragment()
             }

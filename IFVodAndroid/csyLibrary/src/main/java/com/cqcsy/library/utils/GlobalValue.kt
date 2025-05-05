@@ -49,8 +49,7 @@ object GlobalValue {
     var VIDEO_IMAGE_CLIP = "/videoImageClip/"
     var UPLOAD_CUT_FILE = "/uploadCut/"
     var DOWNLOAD_IMAGE = "/downloadImage/"
-    var MUSIC_DOWNLOAD = "/music/"     // 歌曲下载
-    var MUSIC_LRC = "/music/lrc/"     // 歌词缓存目录
+
 
     // 登录信息
     var userInfoBean: UserInfoBean? = null

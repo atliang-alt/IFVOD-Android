@@ -16,7 +16,6 @@ import com.cqcsy.lgsp.views.RefreshFooter
 import com.cqcsy.lgsp.views.RefreshHeader
 import com.cqcsy.library.network.HttpRequest
 import com.cqcsy.library.utils.GlobalValue
-import com.cqcsy.music.utils.HeaderInterceptor
 import com.google.android.exoplayer2.database.DefaultDatabaseProvider
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.shuyu.gsyvideoplayer.GSYVideoManager
@@ -59,7 +58,6 @@ class VideoApplication : Application(), Utils.OnAppStatusChangedListener {
 
     private fun initHttp() {
         val builder = OkHttpClient.Builder()
-        builder.addInterceptor(HeaderInterceptor())
         val loggingInterceptor = HttpLoggingInterceptor(HttpLoggingInterceptor.Logger.DEFAULT)
         if (BuildConfig.BUILD_TYPE != "release")
             loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY //log打印级别，决定了log显示的详细程度

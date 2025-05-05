@@ -120,19 +120,7 @@ class DBHelper internal constructor(context: Context?) : SQLiteOpenHelper(
         )
     }
 
-    /**
-     * 未登录本地音乐播放记录
-     */
-    private fun createMusicRecord(db: SQLiteDatabase) {
-        if (isTableExist(db, MUSIC_RECORD)) {
-            return
-        }
-        db.execSQL(
-            "CREATE TABLE IF NOT EXISTS " + MUSIC_RECORD
-                    + " (id INTEGER PRIMARY KEY AUTOINCREMENT, mediaKey NVARCHAR, musicName NVARCHAR, songKey NVARCHAR, singerKey NVARCHAR, singerImage NVARCHAR, singerName NVARCHAR, songType INTEGER,"
-                    + " isCollected BOOLEAN)"
-        )
-    }
+ 
 
     /**
      * 未登录本地歌单播放记录
@@ -228,13 +216,6 @@ class DBHelper internal constructor(context: Context?) : SQLiteOpenHelper(
         // 发布动态缓存表
         val DYNAMIC_CACHE = "dynamicCache"
 
-        // 音乐播放记录
-        val MUSIC_RECORD = "musicLocalRecord"
-
-        // 歌单播放记录
-        val SHEET_RECORD = "sheetLocalRecord"
-
-        // 播放列表
-        val MUSIC_PLAY_LIST = "musicPlayList"
+ 
     }
 }

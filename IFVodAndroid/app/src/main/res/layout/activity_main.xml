@@ -111,21 +111,6 @@
 
         </LinearLayout>
 
-        <com.cqcsy.lgsp.views.widget.CustomRadioButton
-            android:id="@+id/button_music"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/bottom_music_selector"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="6dp"
-            android:text="@string/music"
-            android:textColor="@color/bottom_tab_color"
-            android:textSize="11sp"
-            android:visibility="gone" />
 
         <com.cqcsy.lgsp.views.widget.CustomRadioButton
             android:id="@+id/button_hot"
