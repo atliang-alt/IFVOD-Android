@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/grey_4"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/headerTab"
+            style="@style/tab_center_style"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal" />
+    </FrameLayout>
+
+    <com.cqcsy.lgsp.views.widget.CustomViewpager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View style="@style/line_light_style" />
+
+    <include
+        android:id="@+id/editContent"
+        layout="@layout/layout_edit_bottom" />
+</LinearLayout>

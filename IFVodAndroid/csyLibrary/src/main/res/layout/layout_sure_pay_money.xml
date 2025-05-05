@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_warn_max" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/sure_pay"
+        android:textColor="@color/grey_4"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/sure_pay_tips"
+        android:textColor="@color/grey_2"
+        android:textSize="14sp" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/surePay"
+        style="@style/button_style_normal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="63dp"
+        android:enabled="true"
+        android:onClick="surePay"
+        android:text="@string/sure_payed" />
+</LinearLayout>

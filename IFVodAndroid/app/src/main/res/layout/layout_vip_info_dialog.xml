@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:background="@color/background_vip_details_dialog"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/vipClassifyImage"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_vip_level_0"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="18.5dp"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"/>
+
+        <TextView
+            android:id="@+id/vipClassifyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/yellow"/>
+
+        <View
+            android:layout_width="18.5dp"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vipTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/vipInfoTitle"/>
+
+    <TextView
+        android:id="@+id/vipDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/validityRules"/>
+
+    <TextView
+        android:id="@+id/vipRuleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/grey"
+        android:textSize="14sp"
+        android:text="@string/vipRuleInfo"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        style="@style/line_style"/>
+
+    <TextView
+        android:id="@+id/vipClose"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="@string/known"
+        android:textStyle="bold"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp" />
+</LinearLayout>

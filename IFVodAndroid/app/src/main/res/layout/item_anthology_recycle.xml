@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:background="@drawable/anthology_item_bg_corner_2"
+    android:maxWidth="138dp">
+
+    <TextView
+        android:id="@+id/anthologyNumb"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minWidth="56dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/anthology_item_text_color_selector"
+        android:textSize="16sp" />
+
+    <com.cqcsy.library.views.SVGView
+        android:id="@+id/playImage"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="bottom"
+        android:scaleType="fitCenter"
+        app:antiAlias="true"
+        app:clearsAfterDetached="false"
+        app:clearsAfterStop="false" />
+
+    <ImageView
+        android:id="@+id/vipImage"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/red_circle_bg"
+        android:visibility="gone" />
+</FrameLayout>

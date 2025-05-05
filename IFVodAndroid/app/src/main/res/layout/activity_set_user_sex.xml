@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="12dp"
+    android:gravity="center_horizontal"
+    android:layout_marginEnd="12dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_4"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:text="@string/sexTips"/>
+
+    <ImageView
+        android:id="@+id/manImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/sex_man_selector"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_4"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/sexMan"/>
+
+    <ImageView
+        android:id="@+id/womanImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/sex_woman_selector"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_4"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/sexWoman"/>
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/menu_bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/upload_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_upload_item"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/upload_video"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/history_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_history"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/historic_records"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/offline_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_offline_video"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/offline_video"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dynamic_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_release_dynamic"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/release_dynamic"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/picture_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_release_picture"
+        android:drawablePadding="5dp"
+        android:gravity="center|left"
+        android:text="@string/album"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/scan_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@mipmap/icon_scan_qr"
+        android:drawablePadding="5dp"
+        android:gravity="center|left"
+        android:text="@string/scan_qr"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+</LinearLayout>

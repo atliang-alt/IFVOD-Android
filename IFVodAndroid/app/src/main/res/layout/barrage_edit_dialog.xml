@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_1"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/barrageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/comment_edit_corner_bg"
+        android:gravity="top"
+        android:hint="@string/comment_warning"
+        android:maxLength="25"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:textColor="@color/word_color_2"
+        android:textColorHint="@color/word_color_5"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/barrageWordNumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/barrageSend"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/barrageSend"
+            android:layout_width="56dp"
+            style="@style/button_style_publish"
+            android:layout_alignParentEnd="true"
+            android:enabled="false"
+            android:text="@string/send"
+            android:textColor="@color/button_text_color_selector"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>

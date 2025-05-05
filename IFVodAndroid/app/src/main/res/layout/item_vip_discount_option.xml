@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vip_option"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cqcsy.lgsp.vip.view.HorizontalVipView
+        android:id="@+id/vip_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        style="@style/line_style"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp" />
+
+    <com.cqcsy.lgsp.vip.view.VipPayTypeView
+        android:id="@+id/vip_pay_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/share_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:layout_marginHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_share_vip_left_bg" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/img_share_vip_right_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_vip_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="37dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/color_ffd73b"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+                        tools:text="6折" />
+
+                    <TextView
+                        android:id="@+id/tv_vip_discount_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white_70"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        tools:text="(不含月费VIP)" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="-19dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:background="@mipmap/img_share_vip_copy_left_bg"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/grey_2"
+                    android:textSize="12sp"
+                    android:id="@+id/share_text"
+                    tools:text="追剧追番综艺电影，海外观影一石二鸟！https://www.112.tv/" />
+
+                <TextView
+                    android:id="@+id/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/img_share_vip_copy_right_bg"
+                    android:gravity="center_vertical|end"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:text="@string/copy" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/share_vip_tip"
+                android:textColor="@color/grey_2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/confirm_share"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:background="@drawable/shape_confirm_share_bg"
+                android:paddingHorizontal="45dp"
+                android:paddingVertical="11dp"
+                android:text="@string/confirm_already_share"
+                android:textColor="@color/selector_confirm_share_vip_text_color"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_success_container"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/img_share_vip_success"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="@string/thanks_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/grey_2"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:text="@string/record_your_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/purchase"
+                android:textColor="@color/color_972d19"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/shape_discount_purchase_bg"
+                android:text="@string/discount_purchase"
+                android:layout_width="160dp"
+                android:layout_height="36dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

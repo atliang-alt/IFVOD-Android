@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progress_loading"
+            android:indeterminateDuration="1000" />
+
+        <TextView
+            android:id="@+id/tv_loading_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/refresh_tip"
+            android:textColor="@color/loading_page_text_color"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/failedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/image_error" />
+
+        <TextView
+            android:id="@+id/failedLargeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/get_data_failed"
+            android:textColor="@color/loading_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/failedLittleTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/get_data_failed_tip"
+            android:textColor="@color/little_tips_color"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/refreshButton"
+            style="@style/button_style_learn_more"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/refresh" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_status_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</merge>

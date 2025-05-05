@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <CheckBox
+        android:id="@+id/item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/check_box_normal_selector"
+        android:checked="true"
+        android:paddingTop="4dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_short_video"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/background_4" />
+
+        <TextView
+            android:id="@+id/short_video_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/banner_gradient_bg"
+            android:gravity="right|center"
+            android:padding="5dp"
+            android:textColor="@color/word_color_7"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/short_video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/short_video_watch_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/short_video_name"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/upload_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentBottom="true"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

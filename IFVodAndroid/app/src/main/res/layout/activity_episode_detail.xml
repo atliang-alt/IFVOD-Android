@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingTop="20dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/downloadAction"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:background="@drawable/button_shape_solid_11"
+            android:drawableLeft="@drawable/add_selector"
+            android:drawablePadding="5dp"
+            android:enabled="true"
+            android:gravity="center"
+            android:onClick="downloadMoreClick"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/download_more"
+            android:textColor="@color/button_report_text_color_selector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/userStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/user_storage"
+            android:textColor="@color/grey"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <com.cqcsy.library.views.LoadingRecyclerView
+        android:id="@+id/detailList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1" />
+
+    <View style="@style/line_light_style" />
+
+    <include
+        android:id="@+id/editContent"
+        layout="@layout/layout_edit_bottom" />
+</LinearLayout>

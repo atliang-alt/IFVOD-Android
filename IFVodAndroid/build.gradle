@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.0'
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+
+        maven {
+            url 'https://4thline.org/m2'
+        }
+        maven {
+            url = 'https://cqcsy-maven.pkg.coding.net/repository/core/baselibrary/'
+            credentials {
+                username = 'baselibrary-1645587644925'
+                password = 'd97d53d5b628d275995dca91ae1a69328a1358c0'
+            }
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://4thline.org/m2'
+        }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven {
+            url = 'https://cqcsy-maven.pkg.coding.net/repository/core/baselibrary/'
+            credentials {
+                username = 'baselibrary-1645587644925'
+                password = 'd97d53d5b628d275995dca91ae1a69328a1358c0'
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    sdkVersion = 33
+    minSdkVersion = 21
+    buildToolsVersion = "34.0.0"
+
+    // 蓝光视频配置
+    lgspPackageName = "com.cqcsy.ifvod"
+    lgspKeyPath = "../key/lgsp.properties"
+    lgspVersionName = "1.6.0"
+    lgspBugly = "7d7b494432"   // bugly appid   不可修改
+    lgspLeboAppId = "20082"    // 乐播云appid      不可修改
+    lgspLeboAppKey = "38dc6c32bba60f34fda5bff46237d92a"    // 乐播云appkey  不可修改
+    lgspGoogleMapKey = "AIzaSyA3vLWAQH-Xp8qiGE-fw4SlQgDZEQ_JqkA"//Google map 签名 可修改
+//    lgspUmeng = "608549759e4e8b6f61828258" // 友盟统计key   可修改
+    lgspBaiduLocation = "6KBE1C9PuTg8vxheGwkOlUMeihZNHxk0" // 百度定位key   可修改
+
+    // 只需要修改下面的packagename的值，便可以改变打包或运行的其他参数
+    targetPackageName = lgspPackageName
+}

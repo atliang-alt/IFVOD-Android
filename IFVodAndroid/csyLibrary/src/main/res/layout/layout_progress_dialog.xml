@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:background="@drawable/loading_progress"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="?android:progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDuration="1000"
+        android:indeterminateDrawable="@drawable/progress_loading" />
+
+    <TextView
+        android:id="@+id/progress_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/loading"
+        android:textColor="@color/loading_text_color"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:banner_indicator_height="2dp"
+        app:banner_indicator_normal_color="@color/background_white_transform_30"
+        app:banner_indicator_normal_width="6dp"
+        app:banner_indicator_selected_color="@color/button_normal_start"
+        app:banner_indicator_selected_width="6dp"
+        app:banner_infinite_loop="false" />
+
+    <LinearLayout
+        android:id="@+id/bannerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:id="@+id/photoLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@mipmap/icon_circle_logo" />
+
+            <ImageView
+                android:id="@+id/userVip"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="end|bottom"
+                android:src="@mipmap/icon_vip_level_0"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@id/followText"
+            android:layout_toEndOf="@id/photoLayout"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/createTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/followText"
+            android:layout_toEndOf="@id/photoLayout"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/followText"
+            style="@style/button_style_attention_24"
+            android:layout_width="49dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:text="@string/attention"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:drawableStart="@mipmap/icon_danmaku_location"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <com.cqcsy.library.views.FlowLayout
+        android:id="@+id/tagContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="@color/grey_4"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/commentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center_vertical"
+        android:text="@string/albumCommentCount"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <com.cqcsy.library.views.LoadingView
+        android:id="@+id/statusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

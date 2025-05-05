@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cqcsy.library">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <meta-data
+            android:name="com.cqcsy.library.GlideCacheSetting"
+            android:value="AppGlideModule" />
+
+        <activity
+            android:name=".base.WebViewActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.card.CreditCardNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.card.AddBillAddressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pay.card.CardPaySuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.card.SelectBillAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.polymerization.TGCPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.polymerization.NotPayMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.polymerization.NoPayFeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.polymerization.AlipayOrWeChatPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.area.AreaSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pay.area.ProvinceSelectActivity"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

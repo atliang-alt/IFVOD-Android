@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="12dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <FrameLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/userPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_circle_logo" />
+
+            <ImageView
+                android:id="@+id/userVipImage"
+                android:layout_width="11dp"
+                android:layout_height="12dp"
+                android:layout_gravity="end|bottom"
+                android:src="@mipmap/icon_vip_level_0"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imageLayout"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/orange"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nickName"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/imageLayout"
+            android:text="@string/replyYourComment"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nickName"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/replyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape_solid_11"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

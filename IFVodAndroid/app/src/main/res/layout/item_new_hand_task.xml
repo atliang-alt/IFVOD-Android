@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/white_corner_10_bg">
+
+    <TextView
+        android:id="@+id/taskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="24dp"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@+id/goToFinish"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/taskCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskName"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/taskCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskCounts"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:drawableStart="@mipmap/icon_task_coin_32"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/taskExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/taskCounts"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/taskCoin"
+        android:drawableStart="@mipmap/icon_exp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/goToFinish"
+        android:layout_width="66dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/task_finish_selector"
+        android:gravity="center"
+        android:text="@string/goToFinish"
+        android:textColor="@color/task_finish_text_color_selector" />
+</RelativeLayout>

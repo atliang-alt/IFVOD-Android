@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp">
+
+    <FrameLayout
+        android:id="@+id/colorItemRoot"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/barrage_color_setting_bg">
+
+        <ImageView
+            android:id="@+id/selectedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@mipmap/icon_color_selected"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/colorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/colorItemRoot"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/barrage_setting_text_color_selector"
+        android:textSize="11sp" />
+</RelativeLayout>

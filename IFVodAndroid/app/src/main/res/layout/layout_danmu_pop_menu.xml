@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:paddingHorizontal="15dp"
+    android:background="@drawable/shape_danmu_pop_bg"
+    tools:layout_height="71dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="弹幕弹幕弹幕弹幕弹幕弹幕"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            tools:text="人名"
+            android:textColor="@color/white_60"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content">
+
+        <CheckedTextView
+            android:drawableStart="@drawable/short_36_zan_selector"
+            android:id="@+id/like"
+            tools:checked="true"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            tools:text="@string/fabulous"
+            android:drawablePadding="4dp"
+            android:textColor="@color/danmu_like_text_color"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:drawableStart="@mipmap/icon_danmu_copy"
+            android:id="@+id/copy"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginStart="30dp"
+            android:text="@string/copy_danmu"
+            android:drawablePadding="4dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/shield"
+            android:layout_marginStart="30dp"
+            android:drawableStart="@mipmap/icon_shield_danmu"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/forbidden"
+            android:drawablePadding="4dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/report"
+            android:drawableStart="@mipmap/icon_report_danmu"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="14sp"
+            android:text="@string/report"
+            android:drawablePadding="4dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

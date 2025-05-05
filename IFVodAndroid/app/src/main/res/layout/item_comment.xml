@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/commentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <FrameLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="28dp"
+            android:layout_height="28dp">
+
+            <ImageView
+                android:id="@+id/commentImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_circle_logo" />
+
+            <ImageView
+                android:id="@+id/userVipImage"
+                android:layout_width="11dp"
+                android:layout_height="12dp"
+                android:layout_gravity="end|bottom"
+                android:src="@mipmap/icon_vip_level_0"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/commentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toStartOf="@+id/commentFabulousLayout"
+            android:layout_toEndOf="@+id/imageLayout"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/commentFabulousLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/commentFabulousCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:text="@string/fabulous"
+                android:textColor="@color/button_zan_text_color_selector"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/commentFabulousImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zan_selector" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/commentVipLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4" />
+
+        <com.cqcsy.lgsp.views.widget.ExpandTextView
+            android:id="@+id/commentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/commentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/commentReply"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/commentReply" />
+
+        <TextView
+            android:id="@+id/commentReply"
+            style="@style/button_style_reply"
+            android:layout_width="34dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="@string/reply"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/commentTime"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/replay_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/line_style"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="15dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/replay_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:drawableEnd="@mipmap/icon_blue_arrow_down"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="@string/all_reply"
+        android:textColor="@color/blue"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commentTime" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/bottomLineView"
+            style="@style/line_style"
+            android:layout_marginStart="42dp" />
+
+        <LinearLayout
+            android:id="@+id/bottomLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <View
+                style="@style/line_style"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/recommendComment"
+                android:textColor="@color/grey_2"
+                android:textSize="12sp" />
+
+            <View
+                style="@style/line_style"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

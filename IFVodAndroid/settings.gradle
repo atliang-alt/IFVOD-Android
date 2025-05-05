@@ -1,0 +1,6 @@
+rootProject.name='IFVodAndroid'
+include ':app'
+include ':csyLibrary'
+include ':gsyVideoPlayer'
+include ':AkDanmaku'
+include ':barcode-scan'

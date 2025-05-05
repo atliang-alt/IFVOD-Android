@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginStart="5dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:layout_height="118dp">
+
+    <com.cqcsy.library.views.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/longImageTag"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_width="wrap_content"
+        android:src="@mipmap/icon_long_image_flag"
+        android:layout_height="wrap_content" />
+</FrameLayout>

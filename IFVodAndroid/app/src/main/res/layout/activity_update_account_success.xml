@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/icon_update_success" />
+
+    <TextView
+        android:id="@+id/updateAccountSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/updateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sure"
+        style="@style/button_style_normal"
+        android:layout_width="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="sure"
+        android:text="@string/confirm"
+        android:textSize="16sp" />
+</LinearLayout>

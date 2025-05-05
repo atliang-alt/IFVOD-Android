@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vip_intro_names">
+        <item>超清4K</item>
+        <item>过滤播放器广告</item>
+        <item>求片</item>
+        <item>云加速</item>
+        <item>倍速播放</item>
+        <item>离线播放</item>
+        <item>自定义弹幕</item>
+        <item>VIP表情包</item>
+        <item>发起投票权</item>
+    </string-array>
+    <string-array name="vip_intro_sub_des">
+        <item>尊贵享受，超清影视</item>
+        <item>广告特权，为您节省时间！</item>
+        <item>寻找心中神剧</item>
+        <item>加速播放，不再卡顿</item>
+        <item>倍速播放，留住精彩</item>
+        <item>离线播放，精彩不停</item>
+        <item>个性弹幕，抢眼！</item>
+        <item>聊天斗图，其乐无穷</item>
+        <item>互动的快乐</item>
+    </string-array>
+    <string-array name="vip_intro_detail">
+        <item>VIP专享720P、1080P以及4k超清影视，采用先进编码技术，带给您极致的视听盛宴！ \n(手机APP/网页端暂不支持4K）</item>
+        <item>VIP专享广告过滤特权,帮您自动过滤至少20秒视频中的穿插广告，为您提供更加纯净的观影体验。</item>
+        <item>VIP可享受优先求片特权！不必再为没有影视资源而烦恼。</item>
+        <item>全球各地部署的上千台云主机专为VIP加速，播放不再卡顿！</item>
+        <item>VIP可使用倍速播放，快慢随心，提高观影效率，适应快节奏生活。</item>
+        <item>VIP可通过手机App，电脑客户端下载线上剧集，无需网络也能畅享高清影视。边下边看，专享极速下载。</item>
+        <item>VIP可自定义弹幕颜色与位置。样式多到挑不过来，让您的弹幕脱颖而出！</item>
+        <item>VIP拥有专属表情包，聊出花样，聊出特色，表情比文字更加生动！</item>
+        <item>VIP可在评论区向所有人发起投票，分享您的想法，解锁话题之王！</item>
+    </string-array>
+    <string-array name="grade_names">
+        <item>观看标清视频</item>
+        <item>发表评论</item>
+        <item>上传视频</item>
+        <item>自定义弹幕颜色</item>
+        <item>VIP专属表情</item>
+        <item>发起投票</item>
+        <item>云加速</item>
+        <item>倍速播放</item>
+        <item>求片</item>
+        <item>观看高清视频</item>
+    </string-array>
+
+    <string-array name="person_menu">
+        <item>赚金币</item>
+        <item>广告中心</item>
+        <item>VIP开通记录</item>
+        <item>大V认证</item>
+        <item>帮助中心</item>
+        <item>求片</item>
+        <item>联系客服</item>
+        <item>设置</item>
+    </string-array>
+    <string-array name="colors_item_name">
+        <item>白</item>
+        <item>紫</item>
+        <item>绿</item>
+        <item>蓝</item>
+        <item>黄</item>
+        <item>红</item>
+        <item>橙</item>
+        <item>黑</item>
+    </string-array>
+
+    <string-array name="play_speed">
+        <item>2.0 X</item>
+        <item>1.5 X</item>
+        <item>1.25 X</item>
+        <item>1.0 X</item>
+        <item>0.75 X</item>
+        <item>0.5 X</item>
+    </string-array>
+
+    <string-array name="report_reasons">
+        <item>剧透</item>
+        <item>人身攻击</item>
+        <item>恶意刷弹幕</item>
+        <item>发布广告</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="comment_report_reasons">
+        <item>剧透</item>
+        <item>人身攻击</item>
+        <item>发布广告</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="internet_environment">
+        <item>家庭、公司有线网络或WIFI</item>
+        <item>手机3G、4G</item>
+        <item>校园网、大型企业内部网络</item>
+        <item>网吧</item>
+        <item>机场、KFC、星巴克等公共网络</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="video_type">
+        <item>不确定</item>
+        <item>电影</item>
+        <item>电视剧</item>
+        <item>综艺</item>
+        <item>动漫</item>
+        <item>体育</item>
+        <item>纪录片</item>
+    </string-array>
+
+    <string-array name="video_area">
+        <item>不确定</item>
+        <item>大陆</item>
+        <item>香港</item>
+        <item>韩国</item>
+        <item>日本</item>
+        <item>新马泰</item>
+        <item>美国</item>
+        <item>英国</item>
+        <item>意大利</item>
+        <item>西班牙</item>
+        <item>法国</item>
+        <item>德国</item>
+        <item>印度</item>
+    </string-array>
+
+    <string-array name="search_tab_text">
+        <item>视频</item>
+        <item>用户</item>
+        <item>动态</item>
+        <item>相册</item>
+    </string-array>
+
+    <string-array name="record_tab_text">
+        <item>剧集</item>
+        <item>小视频</item>
+        <item>动态</item>
+        <item>相册</item>
+    </string-array>
+
+    <string-array name="host_select">
+        <item>正式</item>
+        <item>预发布</item>
+        <item>测试</item>
+    </string-array>
+
+    <string-array name="play_detail_tabs">
+        <item>简介</item>
+        <item>聊天</item>
+        <item>评论</item>
+    </string-array>
+</resources>

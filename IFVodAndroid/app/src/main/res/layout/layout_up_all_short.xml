@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/video_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/grey_2"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:id="@+id/short_image_content"
+        android:layout_width="140dp"
+        android:layout_height="79dp"
+        android:layout_below="@id/video_type"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/video_item_bg">
+
+        <ImageView
+            android:id="@+id/image_short_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_4"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/short_video_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/banner_gradient_bg"
+            android:gravity="right|bottom"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/word_color_7"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/short_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_type"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/short_image_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/play_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/short_image_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/short_image_content"
+        android:drawableLeft="@mipmap/icon_play_count"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/grey"
+        android:textSize="11sp" />
+
+</RelativeLayout>

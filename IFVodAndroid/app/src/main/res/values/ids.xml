@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="vip_tab_name" type="id" />
+    <item name="vip_tab_time" type="id" />
+    <item name="vip_tab_tag" type="id" />
+</resources>

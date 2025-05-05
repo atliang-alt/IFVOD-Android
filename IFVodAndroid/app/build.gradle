@@ -1,0 +1,169 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.sdkVersion
+
+    // 根据包名修改签名、版本号、包名、应用名称、应用图标
+    def packageName = rootProject.ext.targetPackageName
+    def keyPath = rootProject.ext.lgspKeyPath
+    def targetVersionName = rootProject.ext.lgspVersionName
+    def appName = "@string/app_name"
+    def buglyId = rootProject.ext.lgspBugly
+    def leboId = rootProject.ext.lgspLeboAppId
+    def leboKey = rootProject.ext.lgspLeboAppKey
+    def googleMapKey = rootProject.ext.lgspGoogleMapKey
+//    def umengKey = rootProject.ext.lgspUmeng
+    def baiduLocation = rootProject.ext.lgspBaiduLocation
+
+    def keystorePropertiesFile = file(keyPath)
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    defaultConfig {
+        applicationId packageName
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.sdkVersion
+        versionCode 1
+        versionName targetVersionName
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY  : "13c601c589a2a09611f3c2d8", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                APP_NAME      : appName,
+                BAIDU_LOCATION: baiduLocation,
+        ]
+
+        buildConfigField("String", "BUGLY_ID", "\"${buglyId}\"")
+        buildConfigField("String", "LEBO_ID", "\"${leboId}\"")
+        buildConfigField("String", "LEBO_KEY", "\"${leboKey}\"")
+        buildConfigField("String", "GOOGLE_MAP_KEY", "\"${googleMapKey}\"")
+//        buildConfigField("String", "UMENG_KEY", "\"${umengKey}\"")
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        dev {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all {
+        variant ->
+            if (!variant.buildType.name.contains('debug')) {
+                variant.outputs.all {
+                    outputFileName = "lgsp_mobile" +
+                            "_" + variant.buildType.name + "_V${defaultConfig.versionName}_${releaseTime()}.apk"
+                }
+            }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    //去重复的引用
+    packagingOptions {
+        exclude 'META-INF/beans.xml'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+            res {
+                srcDirs 'src/main/res'
+            }    //disable automatic ndk-build
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+//configurations.all {
+//    resolutionStrategy {
+//        force 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+//    }
+//}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation project(path: ':AkDanmaku')
+    implementation project(path: ':barcode-scan')
+    implementation project(path: ':musicplay')
+//    implementation project(path: ':gsyVideoPlayer')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+
+    implementation('io.socket:socket.io-client:1.0.0') {    // 不能升级高版本，后端版本比较低，升级后无法连接
+        exclude group: 'org.json', module: 'json'
+    }
+    //bugly的仓库
+    implementation 'com.tencent.bugly:crashreport:4.1.9'
+    implementation 'com.tencent.bugly:nativecrashreport:3.9.2'
+
+    // 图片剪切
+    implementation 'com.github.yalantis:ucrop:2.2.6'
+
+    implementation(name: 'lelink', ext: 'aar')
+
+    implementation 'com.zhy:okhttputils:2.6.2'
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelView:4.1.7'
+
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Location_All:9.1.8'
+    implementation 'cn.jiguang.sdk:jpush:5.0.3'
+    implementation "com.google.zxing:core:3.3.3"
+    implementation 'com.github.donkingliang:ConsecutiveScroller:4.6.3'
+    implementation 'com.github.yellowcath:VideoProcessor:2.4.2'
+    implementation 'io.github.lucksiege:pictureselector:v3.11.1'
+    implementation 'com.drakeet.multitype:multitype:4.3.0'
+}

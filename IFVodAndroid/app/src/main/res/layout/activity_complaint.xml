@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12sp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/icon_circle_logo" />
+
+            <TextView
+                android:id="@+id/nickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View style="@style/line_style" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/complaintReason"
+            android:textColor="@color/grey_4"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/radioOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/politics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingStart="10dp"
+                android:text="@string/politics"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/pornographic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingStart="10dp"
+                android:text="@string/pornographic"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/maliciousHarassment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingStart="10dp"
+                android:text="@string/maliciousHarassment"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/advertising"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingStart="10dp"
+                android:text="@string/advertising"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingStart="10dp"
+                android:text="@string/other"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/remarks"
+            android:textColor="@color/grey_4"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editContext"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_stroke_corner_4"
+            android:gravity="top|left"
+            android:hint="@string/pleaseWrite"
+            android:padding="10dp"
+            android:textColor="@color/word_color_2"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/submit"
+            style="@style/button_style_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:enabled="false"
+            android:onClick="submit"
+            android:text="@string/submit"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemVipFrame"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/itemVipLayout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/international_vip_classify_item_selector"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:minHeight="44dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vipDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:textColor="@color/vip_classify_days_text_color_selector"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:text="30天" />
+
+            <TextView
+                android:id="@+id/vipGiftDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:textColor="@color/vip_classify_days_text_color_selector"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="30天"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vipPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/vip_classify_discount_price_text_color_selector"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            tools:text="100"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/vipPriceSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/vip_classify_price_text_color_selector"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="￥" />
+
+            <TextView
+                android:id="@+id/vipDisPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:maxLines="1"
+                android:textColor="@color/vip_classify_price_text_color_selector"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="100" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vipRmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/vipGradeImage"
+                android:layout_width="19dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/icon_vip_level_0" />
+
+            <TextView
+                android:id="@+id/vipClassifyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/vip_classify_name_text_color_selector"
+                android:textSize="12sp"
+                tools:text="黄金会员" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vipTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_first_discount"
+        android:gravity="center"
+        android:paddingStart="2dp"
+        android:paddingTop="1dp"
+        android:paddingEnd="2dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone"
+        tools:text="超划算"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/vipNumbTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/icon_vip_two_tag"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

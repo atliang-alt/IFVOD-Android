@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    android:orientation="vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <LinearLayout
+        android:id="@+id/cancelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_warn_max" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/not_pay_cancel"
+            android:textColor="@color/grey_4"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <View
+            style="@style/line_style"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/add_bill_address_bg"
+            android:gravity="center"
+            android:onClick="cancelOrder"
+            android:text="@string/cancel_order"
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/backLayout"
+        android:visibility="gone"
+        layout="@layout/layout_pay_order_cancel" />
+</FrameLayout>

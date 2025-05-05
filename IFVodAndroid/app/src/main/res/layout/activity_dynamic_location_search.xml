@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/searchBackImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="clickBack"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+        <EditText
+            android:id="@+id/searchEdit"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/searchText"
+            android:layout_toEndOf="@+id/searchBackImage"
+            android:background="@drawable/edit_corner_bg"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="5dp"
+            android:singleLine="true"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/search"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/noLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:gravity="center_vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/noLocation"
+            android:textColor="@color/grey_2"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <com.cqcsy.library.views.LoadingView
+            android:id="@+id/statusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</LinearLayout>

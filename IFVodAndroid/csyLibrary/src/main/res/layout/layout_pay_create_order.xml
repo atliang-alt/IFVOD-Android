@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/moneyUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/moneyUnit"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/payTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_grey_corner_10">
+
+        <ImageView
+            android:id="@+id/payImage"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/payName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@id/payImage"
+            android:textColor="@color/grey_4"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/payAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payImage"
+            android:layout_toStartOf="@id/copyAccount"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="15dp"
+            android:maxLines="2"
+            android:textColor="@color/grey_4"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/copyAccount"
+            android:layout_width="49dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/payImage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edit_stroke_bg"
+            android:gravity="center"
+            android:text="@string/copy"
+            android:textColor="@color/grey_4"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/payTipImg"
+        android:layout_width="172dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/payTips"
+        android:textColor="@color/grey_2"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/payNext"
+        style="@style/button_style_normal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:enabled="false"
+        android:onClick="nextClick"
+        android:text="@string/payNext" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="noPayClick"
+        android:padding="10dp"
+        android:text="@string/noPay"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+</LinearLayout>

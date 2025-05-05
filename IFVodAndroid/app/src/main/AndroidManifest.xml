@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cqcsy.lgsp">
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" /> <!-- 华为角标 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 忽略电源优化 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 安装apk高于25 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.UPDATE_APP_OPS_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Android Q后台定位权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name="com.cqcsy.lgsp.app.VideoApplication"
+        android:allowBackup="true"
+        android:enableOnBackInvokedCallback="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${APP_NAME}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="${BAIDU_LOCATION}" />
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:foregroundServiceType="location"
+            android:process=":remote" />
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+
+        <activity
+            android:name="com.cqcsy.lgsp.main.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="com.cqcsy.lgsp"
+                    android:scheme="csy" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cqcsy.lgsp.main.MainActivity"
+            android:alwaysRetainTaskState="true"
+            android:clearTaskOnLaunch="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.search.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.search.CategoryFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.search.ShortVideoFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.record.RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.home.FollowingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.home.NewsSecondActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.AccountVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.SettingPassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.RetrievePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.video.AnthologyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.login.CaptchaActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.cqcsy.lgsp.video.VideoPlayVerticalActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.screenshare.ScreenShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.vip.OpenVipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.vip.NewVoteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.cqcsy.lgsp.vip.HelpFriendOpenVip"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cqcsy.lgsp.vip.HelpFriendOpenVipSelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.offline.OfflineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.offline.DownloadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.UploadCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.SelectLocalImageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.SelectVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.VideoPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.mine.DynamicVideoPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.ShortVideoInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.clip.PhotoCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.SelectVideoFaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.UploadedShortVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.UploadingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.offline.EpisodeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.UpperActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.find.MoreAttentionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.UserFocusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.UserFansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.chat.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.chat.ChatSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.chat.ComplaintActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.EditUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SetUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SetUserSexActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.UserCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.VIPOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.PlayAndDownloadSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.BlackListManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.HelpCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineFansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.CommentAndReplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.ReceivedFabulousActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SystemMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.PrivateMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineVoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.AccountAndSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.AccountSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.UpdateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.UpdateAccountSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SystemDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.PoliteInvitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.WriteInviteCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.TaskCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.NewHandTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SignGetGiftActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineGradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.AlbumDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.EditAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.UploadPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.UploadPhotoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.SelectAlbumImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.TransferAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.CreateAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upload.SelectLocalViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".upload.AlbumGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.MineDynamicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.ReleaseDynamicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".main.mine.ReleaseDynamicVideoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.DynamicDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.mine.DynamicLocalVideoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.DynamicLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.LocationSearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 如果您项目中的所有页面都只需要以高或宽中的一个作为基准进行适配的话, 那就只需要填写高或宽中的一个设计图尺寸即可 -->
+        <!--
+    <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+         <meta-data
+             android:name="design_height_in_dp"
+             android:value="667"/>
+        -->
+        <service
+            android:name="com.cqcsy.lgsp.upload.UploadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- 极光推送 -->
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="${applicationId}.DownloadProvider"
+            android:exported="true" />
+
+        <service
+            android:name="com.cqcsy.lgsp.push.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".main.mine.ReleaseDynamicService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <receiver
+            android:name="com.cqcsy.lgsp.push.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.cqcsy.lgsp.push.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+
+                <!-- Required 用户注册 SDK 的 intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收 SDK 消息的 intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收 SDK 通知栏信息的 intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的 intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+
+        <activity
+            android:name="com.cqcsy.lgsp.main.vip.VIPIntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.VideoWantedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.LoginOutTipActivity"
+            android:theme="@style/dialog_style" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.mine.PlaceSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.pictures.PictureListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.pictures.ViewAllActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+        <activity
+            android:name="com.cqcsy.lgsp.upper.pictures.PicturesCommentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cqcsy.lgsp.main.PictureViewerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+        <activity
+            android:name=".main.ScanQrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.ScanAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.vip.ExchangeVipActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main.hot.HotActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

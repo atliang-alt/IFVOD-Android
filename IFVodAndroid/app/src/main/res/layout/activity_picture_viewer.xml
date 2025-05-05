@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cqcsy.lgsp.views.widget.HackyViewPager
+        android:id="@+id/pictureLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_1" />
+
+    <!--<com.cqcsy.lgsp.upper.pictures.CommentView
+        android:id="@+id/commentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_1" />-->
+    <FrameLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_1" />
+
+    <TextView
+        android:id="@+id/pageIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/background_transform_50_corner_2"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/word_color_7"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_header" />
+    </LinearLayout>
+</RelativeLayout>

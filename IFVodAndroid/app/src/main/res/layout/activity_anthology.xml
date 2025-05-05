@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/chooseQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableRight="@mipmap/icon_gold_arrow_down"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:onClick="showSelectQuality"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/tab_fill_style"
+        android:layout_height="44dp" />
+
+    <View
+        android:id="@+id/viewLine"
+        style="@style/line_light_style" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/eachPage"
+            android:name="com.cqcsy.lgsp.video.AnthologyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <View style="@style/line_light_style" />
+
+    <LinearLayout
+        android:id="@+id/bottomSdcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_6"
+        android:gravity="center"
+        android:onClick="downloading"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/download_list"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/downloadNumber"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/red_circle_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sdcardLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/card_left"
+            android:textColor="@color/grey"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

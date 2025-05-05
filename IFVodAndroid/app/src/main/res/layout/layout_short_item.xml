@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:background="@drawable/background_grey_corner_2">
+
+        <ImageView
+            android:id="@+id/short_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/hot_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:src="@mipmap/icon_hot" />
+
+        <TextView
+            android:id="@+id/live_repair"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_gravity="right"
+            android:background="@drawable/red20_corner_size2_2_bg"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="@string/live_error_tip"
+            android:textColor="@color/red"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/banner_gradient_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/play_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:drawableStart="@mipmap/icon_play_count"
+                android:drawablePadding="1dp"
+                android:textColor="@color/word_color_7"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/play_count"
+                android:gravity="right"
+                android:textColor="@color/word_color_7"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/short_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="9dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+</LinearLayout>

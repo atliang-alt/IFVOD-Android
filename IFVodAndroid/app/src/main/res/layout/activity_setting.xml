@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_1"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/accountItem"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableRight="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="accountSetting"
+                android:text="@string/account_setting"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/accountLine"
+                style="@style/line_style" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableRight="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="playAndDownloadSetting"
+                android:text="@string/play_download_setting"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+            <View style="@style/line_style" />
+
+            <TextView
+                android:id="@+id/vote_manager"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableRight="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="voteManager"
+                android:text="@string/vote_manager"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_1"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/message_setting"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/pushMessageState"
+                    style="@style/switchStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/followMessageLine"
+                style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/followMessageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/follow_message_setting"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/followMessageState"
+                    style="@style/switchStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/blackListLine"
+                style="@style/line_style" />
+
+            <TextView
+                android:id="@+id/blackListText"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableEnd="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="blackListSetting"
+                android:text="@string/black_list_setting"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_1"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <RelativeLayout
+                android:id="@+id/simple_to_traditional"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/simple_to_traditional"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/current_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/simple_chinese"
+                    android:textColor="@color/word_color_5"
+                    android:textSize="12sp"
+                    app:drawableEndCompat="@mipmap/icon_grey_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:id="@+id/clearContent"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:onClick="clearCache">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/clear_cache"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cacheSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/word_color_5"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View style="@style/line_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:onClick="showUpdate">
+
+                <TextView
+                    android:id="@+id/updateTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/check_update"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/versionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/word_color_5"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/areaLine"
+                style="@style/line_style"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/areaContent"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:onClick="areaSetting"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/setAdArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/select_country"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/placeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/word_color_5"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/background_1"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableRight="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="showAgreement"
+                android:text="@string/agreement"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+            <View style="@style/line_style" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:drawableRight="@mipmap/icon_grey_arrow"
+                android:gravity="center_vertical"
+                android:onClick="showAbout"
+                android:text="@string/about_us"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loginOut"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/background_1"
+            android:gravity="center"
+            android:onClick="loginOut"
+            android:text="@string/login_out"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
