@@ -12,4 +12,4 @@
 
 
 Telegram:
-![qr](https://github.com/user-attachments/assets/b29be78d-e2f8-437d-a37a-10b956be69ea)
+![photo](https://github.com/user-attachments/assets/eb7fa89a-209f-4e1b-a79a-67c5423f13a5)
