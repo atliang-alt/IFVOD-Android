@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@mipmap/image_drop_down"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/forbidden"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/icon_user_forbidden"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/forbidden"
+        android:textColor="@color/grey_4"
+        android:textSize="12sp" />
+
+    <View
+        style="@style/line_style_vertical"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawableTop="@mipmap/icon_report"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="@string/report"
+        android:textColor="@color/grey_4"
+        android:textSize="12sp" />
+</LinearLayout>

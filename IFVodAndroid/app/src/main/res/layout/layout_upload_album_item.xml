@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <ImageView
+        android:id="@+id/image_film"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/background_grey_corner_2"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
+
+    <ProgressBar
+        android:id="@+id/uploadProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/image_film"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_dp2" />
+
+    <TextView
+        android:id="@+id/uploadError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/image_film"
+        android:text="@string/uploadError"
+        android:textColor="@color/red"
+        android:textSize="11sp"
+        android:visibility="gone" />
+</RelativeLayout>

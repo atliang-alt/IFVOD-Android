@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/securityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bindAccountTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/bindAccountTips"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/securityCertification"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_toStartOf="@+id/lookPassword"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/passwordLoginEditHint"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/word_color_2"
+                android:textColorHint="@color/word_color_11"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/lookPassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="lookPassword"
+                android:scaleType="center"
+                android:src="@drawable/password_state" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/errorTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/sure"
+            style="@style/button_style_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="32dp"
+            android:enabled="false"
+            android:onClick="surePassword"
+            android:text="@string/confirm"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/modifyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/icon_mobile" />
+
+        <TextView
+            android:id="@+id/accountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currentAccountTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/currentAccount"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/modifySure"
+            style="@style/button_style_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:onClick="modifyAccount"
+            android:text="@string/modifyAccount"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

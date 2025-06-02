@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <FrameLayout
+        android:layout_width="140dp"
+        android:layout_height="79dp"
+        android:background="@drawable/video_item_bg">
+
+        <ImageView
+            android:id="@+id/image_short_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_4"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/short_video_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/banner_gradient_bg"
+            android:gravity="right|bottom"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/word_color_7"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/short_video_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/play_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/icon_play_count"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/grey"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/word_color_11"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

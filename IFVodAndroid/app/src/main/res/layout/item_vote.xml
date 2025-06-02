@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voteLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <FrameLayout
+            android:id="@+id/voteImageLayout"
+            android:layout_width="32dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:id="@+id/voteImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_circle_logo" />
+
+            <ImageView
+                android:id="@+id/userVipImage"
+                android:layout_width="11dp"
+                android:layout_height="12dp"
+                android:layout_gravity="end|bottom"
+                android:visibility="invisible"
+                android:src="@mipmap/icon_vip_level_0" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/voteName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/voteImageLayout"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/voteTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voteName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/voteImageLayout"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/vote_content_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/voteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/word_color_vip"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/voteTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/voteCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/voteCount"
+                android:textColor="@color/word_color_vip"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/voteTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/voteTips"
+                android:textColor="@color/word_color_vip"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/voteClick"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                style="@style/button_style_renew"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/vote"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addOptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:background="@color/background_4"/>
+
+    <View
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        style="@style/line_style"/>
+</LinearLayout>

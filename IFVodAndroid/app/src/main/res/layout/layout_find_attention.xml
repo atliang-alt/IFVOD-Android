@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <com.cqcsy.library.views.LoadingRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_toStartOf="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="@string/more"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/word_color_3"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_color"/>
+
+    <FrameLayout
+        android:id="@+id/attentionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

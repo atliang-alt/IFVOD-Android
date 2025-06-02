@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/background_6">
+
+    <ImageView
+        android:id="@+id/vipEmotionImage"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:scaleType="centerInside" />
+
+    <ImageView
+        android:id="@+id/vipEmotionClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:src="@mipmap/icon_circle_close"/>
+</FrameLayout>

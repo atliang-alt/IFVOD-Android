@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="101dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+
+    <FrameLayout
+        android:id="@+id/photoLayout"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:src="@mipmap/icon_circle_logo" />
+
+        <ImageView
+            android:id="@+id/userVip"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="end|bottom"
+            android:src="@mipmap/icon_vip_level_0"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@+id/attentionText"
+        android:layout_toEndOf="@+id/photoLayout">
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/userSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nickName"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/attentionYour"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userSign"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/blackList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_shape_black"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp"
+        android:text="@string/in_black_list"
+        android:textColor="@color/black_1"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/attentionText"
+        style="@style/button_style_attention_24"
+        android:layout_width="49dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/attention" />
+
+    <View
+        style="@style/line_style"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/image_player_thumb"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/net_failed"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/net_failed_tip"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/failedRefresh"
+        style="@style/button_style_continue_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:drawableLeft="@mipmap/icon_refresh_circle"
+        android:drawablePadding="10dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="@string/refresh_load" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_root"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:background="@drawable/video_menu_item_bg_corner_2">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/anthology_item_text_color_selector"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/item_top_image"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/red_circle_bg"
+        android:visibility="gone" />
+
+    <com.cqcsy.library.views.SVGView
+        android:id="@+id/item_bottom_image"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentBottom="true"
+        app:antiAlias="true"
+        app:autoPlay="true" />
+</RelativeLayout>

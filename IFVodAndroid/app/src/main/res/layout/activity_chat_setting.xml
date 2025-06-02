@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingTop="20dp"
+    android:paddingRight="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/upperLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@mipmap/icon_circle_logo" />
+
+        <TextView
+            android:id="@+id/upperName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/upperLogo"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <TextView
+            android:id="@+id/addBlackList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addBlackList"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addBlackList"
+            android:layout_marginTop="1dp"
+            android:text="@string/forbidden_message"
+            android:textColor="@color/grey_2"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/forbiddenMessage"
+            style="@style/switchStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clearRecord"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_chat_message"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/complaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="complaintClick"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/complaint"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp" />
+
+    <View style="@style/line_style" />
+</LinearLayout>

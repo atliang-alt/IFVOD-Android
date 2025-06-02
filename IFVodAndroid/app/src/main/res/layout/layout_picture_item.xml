@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="216dp">
+
+    <TextView
+        android:id="@+id/lookCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:drawablePadding="5dp"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/icon_album_look" />
+
+    <TextView
+        android:id="@+id/commentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/lookCount"
+        android:drawablePadding="5dp"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/icon_album_comment" />
+
+    <TextView
+        android:id="@+id/zanCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/commentCount"
+        android:drawablePadding="5dp"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp"
+        app:drawableStartCompat="@mipmap/icon_album_zan" />
+
+    <TextView
+        android:id="@+id/picture_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picture_cover"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/picture_cover"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/pictures_cover_default"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/uploadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/album_red_corner_7_bg"
+        android:gravity="center"
+        android:minWidth="14dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/picture_size"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_alignBottom="@id/picture_cover"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_transform_50_corner_2"
+        android:drawableStart="@mipmap/icon_photo"
+        android:drawablePadding="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/word_color_2"
+        android:textSize="12sp" />
+</RelativeLayout>

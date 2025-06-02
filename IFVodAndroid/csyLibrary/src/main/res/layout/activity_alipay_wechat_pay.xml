@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <include
+            android:id="@+id/errorLayout"
+            layout="@layout/layout_create_order_error"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/payLayout"
+            layout="@layout/layout_pay_create_order"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/paySuccessLayout"
+            layout="@layout/layout_alipay_pay_success"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/complaintLayout"
+            layout="@layout/layout_seller_complaint"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/frozenLayout"
+            layout="@layout/layout_frozen_pay"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/surePayLayout"
+            layout="@layout/layout_sure_pay_money"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/cancelLayout"
+            layout="@layout/layout_pay_order_cancel"
+            android:visibility="gone" />
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

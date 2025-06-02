@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="102dp"
+    android:background="@drawable/sign_coin_one_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="@string/whatDays"
+        android:textColor="@color/sign_coin_text_selector"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/itemCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:text="@string/whatCoin"
+        android:textColor="@color/sign_coin_text_selector"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</RelativeLayout>

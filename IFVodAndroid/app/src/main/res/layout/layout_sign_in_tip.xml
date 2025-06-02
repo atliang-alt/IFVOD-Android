@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/comment_edit_corner_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/icon_vip_level_1" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:scaleType="fitStart"
+        android:src="@mipmap/image_sign_in_tip" />
+
+    <Button
+        style="@style/button_style_learn_more"
+        android:layout_width="65dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/sign_in"
+        android:onClick="signInClick"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:onClick="closeSignTipClick"
+        android:src="@mipmap/icon_close" />
+</LinearLayout>

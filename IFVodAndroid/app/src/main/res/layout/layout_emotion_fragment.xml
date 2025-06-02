@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:background="@color/background_1"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/line_style" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/emotionPager"
+        android:layout_width="match_parent"
+        android:layout_height="159dp" />
+
+    <com.cqcsy.lgsp.views.emotion.EmotionIndicatorView
+        android:id="@+id/emotionIndicatorView"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+</LinearLayout>

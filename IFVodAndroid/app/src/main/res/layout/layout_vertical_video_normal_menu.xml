@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_3"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/enableTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"
+        android:text="@string/speed_select_options"
+        android:textColor="@color/grey_4"
+        android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menuList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/disable_title_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/disable_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/need_open_lock"
+            android:textColor="@color/grey_4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lvLockTip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:text="@string/vip_locked_lv6_tip"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/open_vip"
+            style="@style/button_style_open_vip_24"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:text="@string/open_vip"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/disableMenuList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"/>
+</LinearLayout>

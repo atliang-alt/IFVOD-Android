@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1">
+
+    <RelativeLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" />
+
+    <include layout="@layout/layout_ad_error" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_video_loading" />
+
+    <FrameLayout
+        android:id="@+id/adTopContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back_white" />
+
+        <LinearLayout
+            android:id="@+id/buyVip"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/adTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="0秒"
+                android:textColor="@color/grey_4"
+                android:textSize="12sp" />
+
+            <View
+                style="@style/line_style_vertical"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/ad_buy_vip_tip"
+                android:textColor="@color/yellow"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/voiceController"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:src="@mipmap/icon_voice_on" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/adBottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_black_corner_2"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp"
+            android:text="@string/advertisement"
+            android:textColor="@color/word_color_8"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/adDetail"
+            style="@style/button_style_learn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_toStartOf="@id/fullscreen"
+            android:drawableRight="@mipmap/icon_white_arrow"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/ad_to_detail"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/fullscreen"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_transform_50_corner_2"
+            android:scaleType="center"
+            android:src="@mipmap/icon_full_screen" />
+    </RelativeLayout>
+</RelativeLayout>

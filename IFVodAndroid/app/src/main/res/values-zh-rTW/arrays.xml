@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vip_intro_names">
+        <item>超清4K</item>
+        <item>過濾播放器廣告</item>
+        <item>求片</item>
+        <item>雲加速</item>
+        <item>倍速播放</item>
+        <item>離線播放</item>
+        <item>自定義彈幕</item>
+        <item>VIP表情包</item>
+        <item>發起投票權</item>
+    </string-array>
+    <string-array name="vip_intro_sub_des">
+        <item>尊貴享受，超清影視</item>
+        <item>廣告特權，為您節省時間！</item>
+        <item>尋找心中神劇</item>
+        <item>加速播放，不在卡頓</item>
+        <item>倍速播放，留住精彩</item>
+        <item>離線播放，精彩不停</item>
+        <item>個性彈幕，搶眼！</item>
+        <item>聊天斗圖，其樂無窮</item>
+        <item>互動的快樂</item>
+    </string-array>
+    <string-array name="vip_intro_detail">
+        <item>VIP專享720P、1080P以及4k超清影視，採用先進編碼技術，帶給您極致的視聽盛宴！ \n(手機APP/網頁端暫不支持4K）</item>
+        <item>VIP專享廣告過濾特權，幫您自動過濾至少20秒視頻中的穿插廣告，為您提供更加純淨的觀影體驗。</item>
+        <item>VIP可享受优先求片特權！不必再为没有影视资源而烦恼。</item>
+        <item>全球各地部署的上千台雲主機專為VIP加速，播放不再卡頓！</item>
+        <item>VIP可使用倍速播放，快慢隨心，提高觀影效率，適應快節奏生活。</item>
+        <item>VIP可通過手機App，電腦客戶端下載線上劇集，無需網絡也能暢享高清影視。邊下邊看，專享極速下載。</item>
+        <item>VIP可自定義彈幕顏色與位置。樣式多到挑不過來，讓您的彈幕脫穎而出！</item>
+        <item>VIP擁有專屬表情包，聊出花樣，聊出特色，表情文字更加生動！</item>
+        <item>VIP可在評論區向所有人發起投票，分享您的想法，解鎖話題之王！</item>
+    </string-array>
+    <string-array name="grade_names">
+        <item>觀看標清視頻</item>
+        <item>發表評論</item>
+        <item>上傳視頻</item>
+        <item>自定義彈幕顏色</item>
+        <item>VIP專屬表情</item>
+        <item>發起投票</item>
+        <item>1.5倍經驗</item>
+        <item>倍速播放</item>
+        <item>求片</item>
+        <item>觀看高清視頻</item>
+    </string-array>
+
+    <string-array name="person_menu">
+        <item>賺金幣</item>
+        <item>廣告中心</item>
+        <item>VIP開通記錄</item>
+        <item>大V認證</item>
+        <item>幫助中心</item>
+        <item>求片</item>
+        <item>聯繫客服</item>
+        <item>設置</item>
+    </string-array>
+    <string-array name="colors_item_name">
+        <item>白</item>
+        <item>紫</item>
+        <item>綠</item>
+        <item>藍</item>
+        <item>黃</item>
+        <item>紅</item>
+        <item>橙</item>
+        <item>黑</item>
+    </string-array>
+
+    <string-array name="play_speed">
+        <item>2.0 X</item>
+        <item>1.5 X</item>
+        <item>1.25 X</item>
+        <item>1.0 X</item>
+        <item>0.75 X</item>
+        <item>0.5 X</item>
+    </string-array>
+
+    <string-array name="report_reasons">
+        <item>劇透</item>
+        <item>人身攻擊</item>
+        <item>惡意刷彈幕</item>
+        <item>發佈廣告</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="comment_report_reasons">
+        <item>劇透</item>
+        <item>人身攻擊</item>
+        <item>發佈廣告</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="internet_environment">
+        <item>家庭、公司有線網絡或WIFI</item>
+        <item>手機3G、4G</item>
+        <item>校園網、大型企業內部網絡</item>
+        <item>網吧</item>
+        <item>機場、KFC、星巴克等公共網絡</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="video_type">
+        <item>不確定</item>
+        <item>電影</item>
+        <item>電視劇</item>
+        <item>綜藝</item>
+        <item>動漫</item>
+        <item>體育</item>
+        <item>紀錄片</item>
+    </string-array>
+
+    <string-array name="video_area">
+        <item>不確定</item>
+        <item>大陸</item>
+        <item>香港</item>
+        <item>韓國</item>
+        <item>日本</item>
+        <item>新馬泰</item>
+        <item>美國</item>
+        <item>英國</item>
+        <item>意大利</item>
+        <item>西班牙</item>
+        <item>法國</item>
+        <item>德國</item>
+        <item>印度</item>
+    </string-array>
+
+    <string-array name="search_tab_text">
+        <item>視頻</item>
+        <item>用戶</item>
+        <item>動態</item>
+        <item>相冊</item>
+    </string-array>
+
+    <string-array name="record_tab_text">
+        <item>劇集</item>
+        <item>小視頻</item>
+        <item>動態</item>
+        <item>相冊</item>
+    </string-array>
+
+    <string-array name="host_select">
+        <item>正式</item>
+        <item>預發佈</item>
+        <item>測試</item>
+    </string-array>
+
+    <string-array name="play_detail_tabs">
+        <item>簡介</item>
+        <item>聊天</item>
+        <item>評論</item>
+    </string-array>
+</resources>

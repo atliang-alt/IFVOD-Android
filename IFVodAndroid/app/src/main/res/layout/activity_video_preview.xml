@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cqcsy.lgsp.upload.PreviewVideoPlayer
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/next_container"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/background_1">
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="56dp"
+            android:background="@drawable/button_shape_solid_1_corners_4"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="12dp"
+            android:text="@string/next"
+            android:textColor="@color/button_text_color_selector"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+</LinearLayout>

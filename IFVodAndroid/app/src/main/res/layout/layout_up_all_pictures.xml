@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/video_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/grey_2"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/picture_cover"
+            android:layout_width="173dp"
+            android:layout_height="173dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/picture_size"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@id/picture_cover"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_transform_50_corner_2"
+            android:drawableStart="@mipmap/icon_photo"
+            android:drawablePadding="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/picture_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/picture_cover"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/picture_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/picture_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/picture_cover"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textColor="@color/word_color_4"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/look_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/picture_cover"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/picture_cover"
+            android:drawableLeft="@mipmap/icon_album_look"
+            android:drawablePadding="5dp"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/picture_cover"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/look_count"
+            android:drawableLeft="@mipmap/icon_album_comment"
+            android:drawablePadding="5dp"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/zan_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/picture_cover"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/comment_count"
+            android:drawableLeft="@mipmap/icon_album_zan"
+            android:drawablePadding="5dp"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</LinearLayout>

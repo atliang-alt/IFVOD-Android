@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/background_1">
+
+    <TextView
+        android:id="@+id/selectCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:text="@string/selected"
+        android:textColor="@color/grey_4"
+        android:textSize="14sp" />
+
+    <CheckedTextView
+        android:id="@+id/select"
+        android:text="@string/select"
+        android:textColor="@color/word_color_3"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:drawableStart="@drawable/check_box_normal_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_width="56dp"
+        android:background="@drawable/button_shape_solid_1_corners_4"
+        android:layout_height="28dp"
+        android:gravity="center"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="12dp"
+        android:text="@string/next"
+        android:textColor="@color/button_text_color_selector"
+        android:textSize="14sp" />
+
+</RelativeLayout>

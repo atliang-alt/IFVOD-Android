@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <EditText
+            android:id="@+id/voteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_shape_solid_12_corners_2"
+            android:gravity="left|top"
+            android:hint="@string/vote_input_hint"
+            android:maxLength="30"
+            android:minHeight="70dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColorHint="@color/word_vote_edit_hint"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/radioSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/singleSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_box_spot_selector"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:text="@string/select_single"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/fewSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:button="@drawable/check_box_spot_selector"
+                android:paddingLeft="10dp"
+                android:text="@string/select_few"
+                android:textColor="@color/word_color_2"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/options"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/optionsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/addOptionContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:onClick="addOptions"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@mipmap/icon_vote_add"
+                android:drawablePadding="5dp"
+                android:text="@string/add_option"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/voteCountsTips"
+                android:textColor="@color/word_color_2"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitVote"
+            style="@style/button_style_normal"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:enabled="false"
+            android:onClick="submitVote"
+            android:text="@string/sendVote" />
+    </LinearLayout>
+</ScrollView>

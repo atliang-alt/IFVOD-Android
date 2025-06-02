@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/userInfoContent"
+        android:layout_width="match_parent"
+        android:layout_height="62dp">
+
+        <ImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/icon_circle_logo" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="11dp"
+            android:layout_toEndOf="@+id/userPhoto"
+            android:text="@string/noLogin"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/vipCategory"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_toEndOf="@id/userName"
+            tools:text="国际VIP"
+            android:paddingHorizontal="4dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:background="@drawable/button_shape_stroke_ffad7e_round2"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/word_color_ffad7e"
+            android:textSize="10sp"
+            android:layout_height="14dp" />
+
+        <ImageView
+            android:id="@+id/vipImage"
+            android:layout_width="11dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="5.5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/vipCategory"
+            android:src="@mipmap/icon_vip_level_0" />
+
+        <TextView
+            android:id="@+id/vipDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userName"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/userPhoto"
+            android:text="@string/openVipTips"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/vipInfoBtn"
+            style="@style/button_style_vip_details"
+            android:layout_width="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:onClick="vipInfoBtn"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/vipInfo"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

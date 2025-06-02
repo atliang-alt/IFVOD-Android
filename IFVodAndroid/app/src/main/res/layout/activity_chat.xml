@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_video_item"
+    android:orientation="vertical">
+
+    <com.cqcsy.library.views.RefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlDrawableArrow="@mipmap/icon_little_progress"
+            app:srlDrawableProgress="@mipmap/icon_little_progress"
+            app:srlEnableLastTime="false"
+            app:srlTextFailed="@string/get_failed"
+            app:srlTextFinish="@string/get_finish"
+            app:srlTextPulling="@string/pull_to_get_history_message"
+            app:srlTextRefreshing="@string/getting_message"
+            app:srlTextRelease="@string/release_to_get" />
+
+        <com.cqcsy.library.views.LoadingRecyclerView
+            android:id="@+id/messageRecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.cqcsy.library.views.RefreshLayout>
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+        <LinearLayout
+            android:id="@+id/sendLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/emojiImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:src="@mipmap/icon_emoji_normal" />
+
+            <ImageView
+                android:id="@+id/sendImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="selectImage"
+                android:paddingLeft="5dp"
+                android:paddingRight="12dp"
+                android:src="@mipmap/icon_send_image" />
+
+            <TextView
+                android:id="@+id/sendMsg"
+                style="@style/button_style_normal"
+                android:layout_width="56dp"
+                android:layout_height="28dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="12dp"
+                android:enabled="false"
+                android:onClick="sendMessage"
+                android:tag="0"
+                android:text="@string/send"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/sendLayout"
+            android:background="@drawable/comment_edit_corner_bg"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:hint="@string/send_message_tip"
+            android:maxHeight="180dp"
+            android:maxLength="500"
+            android:paddingStart="10dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/word_color_2"
+            android:textColorHint="@color/word_color_11"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/emojiContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

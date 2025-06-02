@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">蓝光视频</string>
+
+    <string name="loading">正在加载…</string>
+    <string name="refresh_tip">精彩内容即将呈现...</string>
+    <string name="get_data_failed">当前网络不可用</string>
+    <string name="get_data_failed_tip">请检查网络，再刷新试试吧</string>
+    <string name="refresh">点击刷新</string>
+    <string name="noData">暂无数据</string>
+    <string name="picture_upload_error">图片上传失败</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="set_permission">立即开启</string>
+    <string name="set_permission_message">为更好消息提醒体验，请打开应用浮窗权限，是否立即开启？</string>
+    <string name="url_error">非法地址</string>
+    <string name="parse_error">数据解析失败</string>
+    <string name="http_error">网络请求失败</string>
+    <string name="empty_body">返回数据为空</string>
+
+    <!--支付相关-->
+    <string name="credit_card_pay">信用卡支付</string>
+    <string name="creditCardNoticeTitle">信用卡付款须知(必读)：</string>
+    <string name="creditCardNotice">1.您的账单地址所在国家必须与发卡银行所在国家一致，否则将付款失败。\n2.账单地址所在国家不能为中国。\n3.请如实填写您的账单地址，否则将被标记为欺诈交易。\n4.相同IP在一周内只能支付一次。\n5.如付款不成功请换用其它付款方式。\n6.付款成功却未开通VIP，请联系客服。</string>
+    <string name="selectBillAddress">选择账单地址</string>
+    <string name="add_bill_address">添加账单地址</string>
+    <string name="modify_bill_address">修改账单地址</string>
+    <string name="noBillAddress">你还没有添加账单地址</string>
+    <string name="addBillAddress">添加新地址</string>
+    <string name="big_submit_success">申请成功，请等待审核</string>
+    <string name="deleteBillAddress">是否删除该账单地址？</string>
+    <string name="addBillAddressTips">请如实填写以下信息，否则有可能付款失败！请勿输入中文！</string>
+    <string name="tgc_balance_tips">抱歉！您的%1$s不足</string>
+    <string name="fullName">姓名</string>
+    <string name="name">名</string>
+    <string name="lastName">姓</string>
+    <string name="country">国家</string>
+    <string name="city">城市</string>
+    <string name="province">省份</string>
+    <string name="postalCode">邮编</string>
+    <string name="address">地址</string>
+    <string name="phone">手机</string>
+    <string name="pleaseSelect">请选择</string>
+    <string name="pleaseInputCity">请输入城市</string>
+    <string name="pleaseInputPostalCode">请输入邮编</string>
+    <string name="pleaseInputAddress">请输入地址</string>
+    <string name="pleaseInputEmail">请输入邮箱账号</string>
+    <string name="alipay">支付宝</string>
+    <string name="moneyUnit">元</string>
+    <string name="tgcUnit">TGC</string>
+    <string name="payTips">* 金额需完全相符，请勿备注，否则交易失败！\n* 付款后不点击下方按钮，交易失败！</string>
+    <string name="payNext">我已付款，下一步 (%1$d)</string>
+    <string name="payNextNotNumb">我已付款，下一步</string>
+    <string name="noPay">无法付款?</string>
+    <string name="noPayTitle">无法付款</string>
+    <string name="noPayReason">请选择无法付款的原因</string>
+    <string name="otherProblem">请输入其他问题</string>
+    <string name="pay_time"><![CDATA[请于 <font color="#00C0FF">%1$s分钟内</font> 内向以下账号支付]]></string>
+    <string name="select_other_pay">请选择其他支付方式</string>
+    <string name="tgc_balance">您的余额：%1$sTGC</string>
+    <string name="this_spend">本次将花费</string>
+    <string name="pay_success">付款成功</string>
+    <string name="pay_submit">支付已提交</string>
+    <string name="pay_wait">请等待支付结果</string>
+    <string name="trade_success">交易成功</string>
+    <string name="trade_success_tips">系统正在确认，这个过程会在10分钟内完成</string>
+    <string name="pay_account">收款账号</string>
+    <string name="vip_success">已成功升级VIP！</string>
+    <string name="my_not_pay">我未付款 ></string>
+    <string name="not_pay_cancel">我确定没有付款，我要取消订单</string>
+    <string name="wait_handle">请等待处理</string>
+    <string name="complaint_tips">您的上笔订单已被卖家申诉</string>
+    <string name="pay_type">付款方式：%1$s</string>
+    <string name="pay_name">付款用户：%1$s</string>
+    <string name="complaint_pay_tip">若您未付款，请取消订单；\n若您已付款，请联系客服！</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="pay_frozen">本支付方式已被冻结</string>
+    <string name="pay_close">本支付方式已对您彻底关闭</string>
+    <string name="other_pay_tip">请更换支付方式，或3天后尝试</string>
+    <string name="other_pay">请使用其他支付方式</string>
+    <string name="click_tip_one">您已有 1 次虚假点击“我已付款”或多次取消订单</string>
+    <string name="click_tip_two">您已多次虚假点击“我已付款”</string>
+    <string name="pay_click_tip">注意：\n多次取消订单会被冻结，第二次虚假点击后将无法再使用本支付方式！</string>
+    <string name="sure_pay">您确定已付款？</string>
+    <string name="sure_payed">确定已付款</string>
+    <string name="sure_pay_tips">恶意点击将被永久封号</string>
+    <string name="order_cancel">此订单已取消，请勿支付！</string>
+    <string name="order_create_failed">创建订单失败，请稍后重试</string>
+    <string name="order_params_error">支付参数错误，请重试</string>
+    <string name="order_cancel_tip">本次支付已归档，请关闭页面。 如有问题，请联系客服</string>
+    <string name="frozen_pay_message">我正在购买\n%1$s\n\n* 页面提示该支付方式已被冻结\n- - - - - - - - - - - - - - - - - - - -\n我的账号是：%2$s\n我的昵称是：%3$s\n会员截止时间：%4$s\n支付方式：%5$s</string>
+    <string name="frozen_pay_message_help"><![CDATA[我正在帮 <font color="#E62C17">%1$s</font> 购买\n%2$s\n\n* 页面提示该支付方式已被冻结\n- - - - - - - - - - - - - - - - - - - -\n他的账号是：%3$s\n他的昵称是：%4$s\n支付方式：%5$s]]></string>
+    <string name="close_pay_message">我正在购买\n%1$s\n\n* 页面提示该支付方式已被关闭\n- - - - - - - - - - - - - - - - - - - -\n我的账号是：%2$s\n我的昵称是：%3$s\n会员截止时间：%4$s\n支付方式：%5$s</string>
+    <string name="close_pay_message_help"><![CDATA[我正在帮 <font color="#E62C17">%1$s</font> 购买\n%2$s\n\n* 页面提示该支付方式已被关闭\n- - - - - - - - - - - - - - - - - - - -\n他的账号是：%3$s\n他的昵称是：%4$s\n支付方式：%5$s]]></string>
+    <string name="complaint_message">我正在购买\n%1$s\n\n* 开通VIP的订单已被卖家申诉\n- - - - - - - - - - - - - - - - - - - -\n我的账号是：%2$s\n我的昵称是：%3$s\n会员截止时间：%4$s\n\n支付方式：%5$s\n\n收款方式：%6$s\n收款人姓名：%7$s\n金额：%8$s</string>
+    <string name="complaint_message_help"><![CDATA[我正在帮 <font color="#E62C17">%1$s</font> 购买\n%2$s\n\n* 开通VIP的订单已被卖家申诉\n- - - - - - - - - - - - - - - - - - - -\n他的账号是：%3$s\n他的昵称是：%4$s\n支付方式：%5$s\n\n收款方式：%6$s\n收款人姓名：%7$s\n金额：%8$s]]></string>
+    <string name="pay_message">我正在购买\n%1$s\n- - - - - - - - - - - - - - - - - - - -\n我的账号是：%2$s\n我的昵称是：%3$s\n会员截止时间：%4$s\n\n收款方式：%5$s\n收款人姓名：%6$s\n收款账号：%7$s</string>
+    <string name="pay_message_help"><![CDATA[我正在帮 <font color="#E62C17">%1$s</font> 购买\n%2$s\n- - - - - - - - - - - - - - - - - - - -\n他的账号是：%3$s\n他的昵称是：%4$s\n\n收款方式：%5$s\n收款人姓名：%6$s\n收款账号：%7$s]]></string>
+    <string name="artificial_pay_message">我正在购买\n%1$s\n- - - - - - - - - - - - - - - - - - - -\n我的账号是：%2$s\n我的昵称是：%3$s\n会员截止时间：%4$s\n- - - - - - - - - - - - - - - - - - - -\n* 希望人工支付</string>
+    <string name="artificial_pay_message_help"><![CDATA[我正在帮 <font color="#E62C17">%1$s</font> 购买\n%2$s\n- - - - - - - - - - - - - - - - - - - -\n他的账号是：%3$s\n他的昵称是：%4$s\n- - - - - - - - - - - - - - - - - - - -\n* 希望人工支付]]></string>
+    <string name="customer_service">我的账号是：%1$s\n我的昵称是：%2$s\n所在地区：%3$s\n会员截止时间：%4$s\n</string>
+    <string name="feedback_thanks">感谢您的反馈</string>
+    <string name="continue_pay">继续使用%1$s支付</string>
+    <string name="goToManOption">前往人工支付</string>
+    <string name="order_tips">暂不支持该支付方式</string>
+    <string name="reselect">重新选择</string>
+    <string name="copy_success">已复制到粘贴板</string>
+    <string name="wechat">微信</string>
+    <string name="days">%1$d天</string>
+    <string name="tips">提示</string>
+    <string name="delete">删除</string>
+    <string name="rmbSign">或 ¥ %1$s</string>
+    <string name="old_price">原价%1$s</string>
+    <string name="vip_rule">VIP会员服务条款</string>
+    <string name="province_list_failed">获取省份信息失败</string>
+    <string name="select_country_first">请先选择国家</string>
+    <string name="area_select">选择区域</string>
+    <string name="province_select">选择省份</string>
+    <string name="empty_province_tip">暂无省份信息，请忽略此项</string>
+</resources>

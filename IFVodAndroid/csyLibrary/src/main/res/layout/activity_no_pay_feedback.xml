@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12sp"
+        android:layout_marginEnd="12dp">
+
+        <LinearLayout
+            android:id="@+id/submitLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/noPayReason"
+                android:textColor="@color/grey_4"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false" />
+
+            <EditText
+                android:id="@+id/editContext"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_stroke_corner_4"
+                android:gravity="top|left"
+                android:hint="@string/otherProblem"
+                android:padding="10dp"
+                android:textColor="@color/word_color_2"
+                android:textColorHint="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/submit"
+                style="@style/button_style_normal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:enabled="false"
+                android:onClick="submit"
+                android:text="@string/submit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thanksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/icon_feedback_thanks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/feedback_thanks"
+                android:textColor="@color/grey_4"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginTop="30dp" />
+
+            <TextView
+                android:id="@+id/continuePay"
+                style="@style/button_style_normal"
+                android:layout_width="match_parent"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="51dp"
+                android:enabled="true"
+                android:onClick="continuePay"
+                android:text="@string/continue_pay"/>
+
+            <TextView
+                android:id="@+id/goToManOption"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_shape_solid_12_corners_4"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:layout_marginStart="51dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="51dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="goToManOption"
+                android:textColor="@color/grey"
+                android:text="@string/goToManOption"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

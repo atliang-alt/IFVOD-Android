@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/word_color_11"
+        android:textSize="11sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/userLogo"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@+id/messageLayout"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:background="@mipmap/icon_circle_logo" />
+
+        <ImageView
+            android:id="@+id/serviceTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/userLogo"
+            android:layout_alignBottom="@+id/messageLayout"
+            android:src="@mipmap/icon_small_service"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/messageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/userLogo">
+
+            <ImageView
+                android:id="@+id/messageImg"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/messageExpression"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitEnd"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/imageSending"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="@color/transparent_40"
+                android:visibility="gone">
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/loadingProgress"
+                    style="?android:progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDrawable="@drawable/progress_loading"
+                    android:indeterminateDuration="1000" />
+
+                <ImageView
+                    android:id="@+id/sendFailed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_picture_send_failed"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/from_message_bg"
+                android:gravity="center_vertical"
+                android:minHeight="34dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="4dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/chat_message_from"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/failedRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/messageLayout"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/icon_little_progress"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

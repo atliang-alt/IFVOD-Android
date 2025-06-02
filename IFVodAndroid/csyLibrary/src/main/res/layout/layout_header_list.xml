@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.donkingliang.groupedadapter.widget.StickyHeaderLayout
+        android:id="@+id/stickyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.donkingliang.groupedadapter.widget.StickyHeaderLayout>
+
+    <com.cqcsy.library.views.WaveSideBar
+        android:id="@+id/sideBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="8dp"
+        app:sidebar_lazy_respond="false"
+        app:sidebar_max_offset="80dp"
+        app:sidebar_position="right"
+        app:sidebar_text_alignment="center"
+        app:sidebar_text_color="@color/blue_agreement"
+        app:sidebar_text_size="14sp" />
+</RelativeLayout>

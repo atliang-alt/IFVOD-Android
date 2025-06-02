@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        android:background="@drawable/video_item_bg">
+
+        <ImageView
+            android:id="@+id/itemFollowingImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/background_4"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/itemFollowingUpdateCount"
+            android:layout_width="16dp"
+            android:layout_height="14dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/red_rectangle_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/itemFollowingProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_dp1" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/itemFollowingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/itemFollowingPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/word_color_5"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

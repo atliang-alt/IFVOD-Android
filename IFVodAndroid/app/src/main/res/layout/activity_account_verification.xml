@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verificationCodeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/verificationCodeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="44dp"
+        android:src="@mipmap/icon_mobile" />
+
+    <TextView
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/word_color_2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/checkTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/checkPhoneNumber"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/verificationCode"
+        android:textColor="@color/grey"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/verificationCodeEdit"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/verificationCodeEditHint"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/word_color_2"
+            android:textColorHint="@color/word_color_11"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/getVerificationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="getVerificationCode"
+            android:text="@string/getVerificationCode"
+            android:textColor="@color/blue"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/errorTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/red"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/confirmBtn"
+        style="@style/button_style_normal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="52dp"
+        android:enabled="false"
+        android:onClick="confirmBtn"
+        android:text="@string/confirm" />
+</LinearLayout>

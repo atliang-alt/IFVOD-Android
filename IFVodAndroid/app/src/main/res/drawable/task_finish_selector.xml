@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="14dp"/>
+            <gradient android:angle="0" android:centerColor="@color/task_finish_center_20" android:endColor="@color/task_finish_end_20" android:startColor="@color/task_finish_start_20" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="14dp"/>
+            <gradient android:angle="0" android:centerColor="@color/task_finish_center_20" android:endColor="@color/task_finish_end_20" android:startColor="@color/task_finish_start_20" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="14dp"/>
+            <gradient android:angle="0" android:centerColor="@color/task_finish_center" android:endColor="@color/task_finish_end" android:startColor="@color/task_finish_start" />
+        </shape>
+    </item>
+</selector>

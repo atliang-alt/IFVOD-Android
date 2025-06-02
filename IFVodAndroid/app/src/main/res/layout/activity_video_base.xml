@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_page_bg"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/playerContent"
+            android:layout_width="match_parent"
+            android:layout_height="211dp">
+
+            <com.cqcsy.lgsp.video.player.LiteVideoPlayer
+                android:id="@+id/videoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.cqcsy.lgsp.video.player.LiteVideoAdPlayer
+                android:id="@+id/adPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/shareContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/image_player_thumb"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/leftBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:src="@mipmap/icon_back_white" />
+
+                <ImageView
+                    android:id="@+id/shareOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:onClick="exitShare"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="12dp"
+                    android:src="@mipmap/icon_share_out" />
+
+                <ImageView
+                    android:id="@+id/changeMeschine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/shareOut"
+                    android:onClick="changeShare"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/icon_change_tv" />
+
+                <ImageView
+                    android:id="@+id/playStatus"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_play" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shareCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <SeekBar
+                        android:id="@+id/shareProgress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:max="100"
+                        android:maxHeight="4dp"
+                        android:minHeight="4dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:progressDrawable="@drawable/progress_dp2"
+                        android:thumb="@drawable/progress_thumb" />
+
+                    <TextView
+                        android:id="@+id/shareTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="00:00"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/bottomContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.base.library.view.PageLoadingView
+        android:id="@+id/full_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_page_bg"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

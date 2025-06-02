@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="wrap_content"
+    android:background="@color/background_3"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/icon_notice" />
+
+    <TextView
+        android:id="@+id/noticeTitle"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/word_color_7"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/noticeContent"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="9dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="34dp"
+        android:maxHeight="120dp"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/scrollbar_thumb_bar"
+        android:scrollbarSize="4dp"
+        android:textColor="@color/word_color_7"
+        android:textSize="14sp" />
+
+    <View style="@style/line_style" />
+
+    <TextView
+        android:id="@+id/noticeCancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="@string/known"
+        android:textColor="@color/word_color_7"
+        android:textSize="16sp" />
+
+</LinearLayout>

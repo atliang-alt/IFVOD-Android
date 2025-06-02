@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF101012</color>
+    <color name="colorPrimaryDark">#FF09090D</color>
+    <color name="colorAccent">#FF00C0FF</color>
+
+    <!--不需要做换肤处理颜色-->
+    <color name="blue_10">#1900C0FF</color>
+    <color name="blue_30">#4C00C0FF</color>
+    <color name="blue_agreement">#095C97</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_05">#09FFFFFF</color>
+    <color name="white_10">#19FFFFFF</color>
+    <color name="white_30">#4CFFFFFF</color>
+    <color name="white_20">#32FFFDFE</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_50">#80FFFDFE</color>
+    <color name="white_80">#CCFFFDFE</color>
+    <color name="white_60">#99ffffff</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="grey_2">#ff6F6F71</color>
+    <color name="grey_3">#ffC8C8CC</color>
+    <color name="grey_4">#ffE3E3E5</color>
+    <color name="grey_5">#ffF6F6F6</color>
+    <color name="red_10">#19E62C17</color>
+    <color name="red_20">#32E62C17</color>
+    <color name="red_40">#64E62C17</color>
+    <color name="orange">#FFFF743D</color>
+    <color name="orange_transform_50">#80FF743D</color>
+    <color name="orange_20">#32FF743D</color>
+    <color name="word_vip_price">#ffE62C17</color>
+    <color name="black">#ff3E3E40</color>
+    <color name="black_1">#ff000000</color>
+    <color name="black_2">#ff101012</color>
+    <color name="black_transform_50">#80101012</color>
+    <color name="black_3">#E025252C</color>
+    <color name="black_5">#FF25252C</color>
+    <color name="black_4">#ff17181A</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_90">#E6000000</color>
+    <color name="yellow">#ffFFAD7E</color>
+    <color name="yellow_2">#ffF7C3A7</color>
+    <color name="yellow_3">#ff554424</color>
+    <color name="yellow_4">#ffD6C6B9</color>
+    <color name="yellow_5">#ffEDEAE7</color>
+    <color name="yellow_C68B31">#C68B31</color>
+    <color name="word_vip_days">#ff972D19</color>
+    <color name="blue_2">#ff0877D4</color>
+    <color name="blue_3">#ff7DE2FC</color>
+    <color name="blue_4">#ffB3AFF7</color>
+    <color name="blue_095C97">#ff095C97</color>
+    <color name="progressBar_1">#ffF8AE80</color>
+    <color name="progressBar_2">#ff61C3A2</color>
+    <color name="progressBar_3">#ffC05F6D</color>
+    <color name="progressBar_4">#ff8696C7</color>
+    <color name="progressBar_5">#ffCA8DAE</color>
+    <color name="vip_info_color">#19FEEFE1</color>
+    <color name="transparent_20">#33000000</color>
+    <color name="transparent_30">#4C000000</color>
+    <color name="transparent_60">#66000000</color>
+    <color name="transparent_70">#7D000000</color>
+    <color name="background_task_center">#ff8C28E4</color>
+    <color name="task_finish_start">#ffEE609C</color>
+    <color name="task_finish_center">#ffCF6CC9</color>
+    <color name="task_finish_end">#ffB465DA</color>
+    <color name="task_finish_start_20">#32EE609C</color>
+    <color name="task_finish_center_20">#32CF6CC9</color>
+    <color name="task_finish_end_20">#32B465DA</color>
+    <color name="task_finish_text">#64972D19</color>
+    <color name="new_hand_background">#ffFDC2AA</color>
+    <color name="sign_background_start">#ffFDDB92</color>
+    <color name="sign_background_end">#ffD1FDFF</color>
+    <color name="invite_bg">#ff3260B9</color>
+    <color name="exchange_button">#ff4E66FF</color>
+    <color name="exchange_button_disable">#ff6B7CE3</color>
+
+    <!--按钮颜色-->
+    <color name="button_play_now_start">#1900B8FF</color>
+    <color name="button_play_now_end">#1900E0FF</color>
+    <color name="button_play_now_stroke">#ff00C0FF</color>
+    <color name="button_download_stroke">#ff2F323F</color>
+    <color name="button_vip_details_stroke">#ff6F6F71</color>
+    <color name="button_attention_stroke">#ff00C0FF</color>
+    <color name="button_concerned_stroke">#ffC8C8CC</color>
+    <color name="button_reply">#ff17181A</color>
+    <color name="button_renew_stroke">#ffFFAD7E</color>
+    <color name="button_more">#ff17181A</color>
+    <color name="button_attention_bg">#0CFFFFFF</color>
+
+    <color name="button_open_vip_start">#ffFEC1A1</color>
+    <color name="button_open_vip_end">#ffFEECC6</color>
+    <color name="button_continue_playing">#ff25252C</color>
+
+    <!--文字颜色-->
+    <color name="word_color_1">#ffffffff</color>
+    <color name="word_color_2">#ffE3E3E5</color>
+    <color name="word_color_3">#ffC8C8CC</color>
+    <color name="word_color_4">#ff969699</color>
+    <color name="word_color_5">#ff6F6F71</color>
+    <color name="word_color_6">#ff3E3E40</color>
+    <color name="word_color_7">#ffE3E3E5</color>
+    <color name="word_color_8">#FFC8C8CC</color>
+    <color name="word_color_9">#4CE3E3E5</color>
+    <color name="word_color_10">#FFE3E3E5</color>
+    <color name="word_color_11">#ff6F6F71</color>
+    <color name="word_color_12">#FFC8C8CC</color>
+    <color name="word_color_13">#ffE3E3E5</color>
+    <color name="word_color_loading_page">#FF6F6F71</color>
+    <color name="word_color_vip">#FFFFAD7E</color>
+    <color name="word_color_vip_transform_50">#80FFAD7E</color>
+    <color name="word_open_vip">#ff972D19</color>
+    <color name="word_continue_playing">#ffE3E3E5</color>
+    <color name="word_renew">#ffFFAD7E</color>
+    <color name="word_vote_edit_hint">#ff6F6F71</color>
+    <color name="word_vote_delete">#80FFAD7E</color>
+    <color name="word_vote_count">#7DFFAD7E</color>
+    <color name="chat_message_from">#FF00C0FF</color>
+    <color name="word_color_ffad7e">#ffad7e</color>
+    <color name="word_color_1d546f">#1d546f</color>
+    <color name="word_color_72bfe4">#72bfe4</color>
+
+
+    <!--背景颜色-->
+    <color name="background_1">#ff101012</color>
+    <color name="background_2">#ff101012</color>
+    <color name="background_3">#ff25252C</color>
+    <color name="background_4">#ff17181A</color>
+    <color name="background_5">#B3000000</color>
+    <color name="background_6">#FF25252C</color>
+    <color name="background_7">#FF121012</color>
+    <color name="background_8">#ff101012</color>
+
+    <color name="background_video_item">#FF17181A</color>
+    <color name="background_edit_corner_bg">#1900C0FF</color>
+
+    <color name="background_main_bottom_bg">#FF25252C</color>
+    <color name="background_vip_details_dialog">#FF25252C</color>
+
+    <color name="background_orange_20">#33FEC1A1</color>
+
+    <color name="background_progress_bar">#33FFFFFF</color>
+
+    <color name="background_vote_content_start">#19FEECC6</color>
+    <color name="background_vote_content_end">#33FEC1A1</color>
+    <color name="emoji_indicator_point_normal">#4C000000</color>
+    <color name="background_comment_edit">#19FFFFFF</color>
+
+    <color name="background_white_transform_30">#4CFFFFFF</color>
+    <color name="background_red">#FFE62C17</color>
+    <color name="background_transform_30">#4CFFFFFF</color>
+    <color name="background_black_transform_30">#4C000000</color>
+
+    <color name="background_banner_start_bg">#00101012</color>
+    <color name="background_banner_end_bg">#FF101012</color>
+
+    <color name="background_vip_info_start_bg">#FEECC6</color>
+    <color name="background_vip_info_end_bg">#FEC1A1</color>
+
+    <color name="background_black_10">#19000000</color>
+
+    <color name="background_home_item_bottom">#AE101012</color>
+
+    <!--分割颜色-->
+    <color name="divider_main_tab_color">#FF101012</color>
+
+    <!--    switch color-->
+    <color name="switch_background_normal">#4CFFFFFF</color>
+    <color name="switch_thumb_normal">#FFFFFF</color>
+    <color name="switch_background_checked">#4C00C0FF</color>
+    <color name="switch_thumb_checked">#00C0FF</color>
+    <color name="color_8000C0FF">#8000C0FF</color>
+    <color name="color_00e0ff">#00e0ff</color>
+    <color name="color_00b8ff">#00B8FF</color>
+    <color name="color_80f176ff">#80f176ff</color>
+    <color name="color_803779ff">#803779ff</color>
+    <color name="color_f176ff">#f176ff</color>
+    <color name="color_3779ff">#3779ff</color>
+    <color name="color_8ec5fc">#8ec5fc</color>
+    <color name="color_e0c3fc">#e0c3fc</color>
+    <color name="color_ffd73b">#ffd73b</color>
+    <color name="color_972d19">#972d19</color>
+</resources>

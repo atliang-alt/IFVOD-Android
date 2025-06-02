@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/uploadToAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/uploadToAlbum"
+        android:textColor="@color/word_color_5"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/albumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uploadToAlbum"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:textColor="@color/word_color_7"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style"
+        android:layout_below="@id/albumName"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <com.cqcsy.library.views.LoadingRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/uploadBtn"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/line" />
+
+    <TextView
+        android:id="@+id/uploadBtn"
+        style="@style/button_style_normal"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="5dp"
+        android:enabled="false"
+        android:onClick="uploadClick"
+        android:text="@string/upload"
+        android:textSize="16sp" />
+</RelativeLayout>

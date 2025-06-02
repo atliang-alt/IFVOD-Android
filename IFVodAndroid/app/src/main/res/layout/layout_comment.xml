@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout">
+
+        <com.cqcsy.library.views.RefreshLayout
+            android:id="@+id/commentRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.cqcsy.library.views.LoadingRecyclerView
+                android:id="@+id/commentRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.cqcsy.library.views.RefreshLayout>
+
+        <com.cqcsy.library.views.LoadingView
+            android:id="@+id/statusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <View
+        style="@style/line_style"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottomLayout" />
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="6.5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="6.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/comment_edit_corner_bg">
+
+            <TextView
+                android:id="@+id/commentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/commentUserImage"
+                android:gravity="center_vertical"
+                android:text="@string/sayIt"
+                android:textColor="@color/word_color_5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/commentUserImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sendVote"
+            android:layout_width="72dp"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_vote" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/sendVote"
+                android:textColor="@color/word_color_vip"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

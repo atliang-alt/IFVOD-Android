@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="50dp"
+    android:layout_marginEnd="50dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/captchaTitleTips"
+        android:textColor="@color/word_color_2"
+        android:textSize="28sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:onClick="refreshImage"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/captchaImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/progressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_4"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_little_progress" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/clickRefresh"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/captchaTips"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/captchaEditOne"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape_solid_3"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/captchaEditTwo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_shape_solid_3"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/captchaEditThree"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_shape_solid_3"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/captchaEditFour"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_shape_solid_3"
+            android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/word_color_2"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/errorTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red"
+        android:textSize="12sp" />
+</LinearLayout>

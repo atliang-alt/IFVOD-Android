@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.cqcsy.lgsp.video.player.DynamicVideoPlayer
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/title_container"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="12dp"
+                android:src="@mipmap/icon_dynamic_exit" />
+
+            <ImageView
+                android:id="@+id/user_action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:paddingHorizontal="12dp"
+                android:src="@mipmap/icon_more" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/failedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/image_error" />
+
+            <TextView
+                android:id="@+id/failedLargeTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/video_load_failed"
+                android:textColor="@color/loading_text_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_retry"
+                style="@style/button_style_learn_more"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/click_retry" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:id="@+id/bottom_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/comment_container"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:layout_weight="3"
+            android:background="@drawable/comment_edit_corner_bg">
+
+            <TextView
+                android:id="@+id/commentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/commentUserImage"
+                android:gravity="center_vertical"
+                android:text="@string/sayIt"
+                android:textColor="@color/word_color_5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/commentUserImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/collect_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/collectImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_collection_selector" />
+
+            <TextView
+                android:id="@+id/collectStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/collection"
+                android:textColor="@color/button_zan_text_color_selector"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/like_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/zanImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zan_selector" />
+
+            <TextView
+                android:id="@+id/zanCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fabulous"
+                android:textColor="@color/button_zan_text_color_selector"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/comment"
+            android:textColor="@color/button_zan_text_color_selector"
+            android:textSize="11sp"
+            app:drawableTopCompat="@mipmap/icon_48_comment" />
+    </LinearLayout>
+
+</LinearLayout>

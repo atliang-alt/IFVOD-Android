@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/vip_info_color" />
+    <corners
+        android:bottomRightRadius="1dp"
+        android:topRightRadius="1dp" />
+</shape>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@mipmap/image_status_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/searchBackImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="clickBack"
+            android:paddingStart="12dp"
+            android:paddingEnd="20dp"
+            android:scaleType="center"
+            android:src="@mipmap/icon_back" />
+
+        <com.cqcsy.library.views.SearchEditView
+            android:id="@+id/searchEdit"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:paddingStart="12dp"
+            android:paddingEnd="5dp"
+            android:layout_toStartOf="@+id/searchText"
+            android:layout_toEndOf="@+id/searchBackImage"
+            android:background="@drawable/edit_corner_bg"
+            android:gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/word_color_2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:onClick="searchText"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/search"
+            android:textColor="@color/word_color_2"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/line_light_style" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <ScrollView
+            android:id="@+id/historyAndHotLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/historyLayoutTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/historySearch"
+                        android:textColor="@color/word_color_2"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <CheckedTextView
+                        android:id="@+id/openHistoryWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:onClick="openHistoryWord"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/open"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <com.cqcsy.library.views.FlowLayout
+                    android:id="@+id/historyWordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/clearHistoryWordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:onClick="clearHistoryWord"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@mipmap/icon_delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/clearHistoryWord"
+                        android:textColor="@color/word_color_5"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hotSearchTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/hotSearch"
+                    android:textColor="@color/word_color_2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/hotSearchRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchListRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/searchResultLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/topContent"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    style="@style/tab_center_style"/>
+
+            </LinearLayout>
+
+            <View style="@style/line_style" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

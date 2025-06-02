@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/background_1"
+    android:orientation="horizontal"
+    android:paddingLeft="12dp">
+
+    <TextView
+        android:id="@+id/addTimeSort"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableRight="@mipmap/icon_order_up"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/add_time"
+        android:textColor="@color/word_color_2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/updateTimeSort"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:drawableRight="@mipmap/icon_order_normal"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/update_time"
+        android:textColor="@color/grey"
+        android:textSize="14sp" />
+</LinearLayout>

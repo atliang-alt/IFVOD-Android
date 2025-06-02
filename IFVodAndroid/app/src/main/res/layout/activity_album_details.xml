@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/countLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/black_transform_50">
+
+        <TextView
+            android:id="@+id/browseCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="5dp"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp"
+            app:drawableStartCompat="@mipmap/icon_look" />
+
+        <TextView
+            android:id="@+id/zanCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/commentCount"
+            android:drawablePadding="3dp"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp"
+            app:drawableStartCompat="@mipmap/icon_24_zan" />
+
+        <TextView
+            android:id="@+id/commentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/enterImage"
+            android:drawablePadding="3dp"
+            android:textColor="@color/word_color_2"
+            android:textSize="12sp"
+            app:drawableStartCompat="@mipmap/icon_24_comment" />
+
+        <ImageView
+            android:id="@+id/enterImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/icon_enter" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/uploadContainer"
+        android:layout_below="@id/countLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/uploadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/uploadImg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/icon_upload_photo" />
+
+            <TextView
+                android:id="@+id/uploading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="21dp"
+                android:layout_toEndOf="@id/uploadImg"
+                android:gravity="center_vertical"
+                android:text="@string/uploading"
+                android:textColor="@color/word_color_2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/uploadCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/album_red_corner_7_bg"
+                android:gravity="center"
+                android:minWidth="14dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/uploading"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@id/uploadImg"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_dp1" />
+        </RelativeLayout>
+
+        <com.cqcsy.library.views.FlowLayout
+            android:id="@+id/labelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/albumInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.cqcsy.library.views.RefreshLayout
+        android:layout_below="@id/uploadContainer"
+        android:id="@+id/albumDetailsRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.cqcsy.library.views.LoadingRecyclerView
+                android:id="@+id/albumDetailsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp" />
+
+            <com.cqcsy.library.views.LoadingView
+                android:id="@+id/statusView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+    </com.cqcsy.library.views.RefreshLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="22dp"
+        android:onClick="addPhoto"
+        android:src="@mipmap/icon_float_add" />
+</RelativeLayout>

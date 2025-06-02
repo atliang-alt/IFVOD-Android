@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/vipEmotionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_1">
+
+        <com.cqcsy.lgsp.views.widget.CommentEditView
+            android:id="@+id/commentEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@id/emojiImage"
+            android:background="@drawable/comment_edit_corner_bg"
+            android:gravity="top"
+            android:hint="@string/comment_warning"
+            android:maxLength="255"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:textColor="@color/word_color_2"
+            android:textColorHint="@color/word_color_5"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/emojiImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/commentEdit"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/commentSend"
+            android:src="@drawable/button_emoji_selector" />
+
+        <TextView
+            android:id="@+id/commentSend"
+            style="@style/button_style_publish"
+            android:layout_width="56dp"
+            android:layout_alignBottom="@+id/commentEdit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:enabled="false"
+            android:tag="0"
+            android:text="@string/send"
+            android:textColor="@color/button_text_color_selector"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/emojiContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_page_bg"
+    android:orientation="vertical">
+
+    <com.yalantis.ucrop.view.UCropView
+        android:id="@+id/uCrop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            style="@style/button_style_search_more"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:onClick="cancelClick"
+            android:text="@string/cancel"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            style="@style/button_style_normal"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="30dp"
+            android:onClick="sureClick"
+            android:text="@string/confirm"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

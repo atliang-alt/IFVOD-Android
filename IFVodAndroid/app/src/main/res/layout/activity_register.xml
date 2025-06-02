@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/registerTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/phoneLoginLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="phoneRegister"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/phoneRegisterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phoneRegister"
+                android:textColor="@color/word_color_2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/phoneRegisterLine"
+                android:layout_width="12dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="9.5dp"
+                android:background="@drawable/blue_round_corner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailRegisterLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="emailRegister"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/emailRegisterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/emailRegister"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/emailRegisterLine"
+                android:layout_width="12dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="9.5dp"
+                android:background="@drawable/blue_round_corner"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerTypeLayout"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/editTipsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="@string/phoneNumber"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp">
+
+            <LinearLayout
+                android:id="@+id/phoneNumbEditLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:onClick="selectArea"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/loginAreaNumb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:src="@mipmap/icon_triangle_blue" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/phoneNumbEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/phoneNumbEditHint"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textColor="@color/word_color_2"
+                    android:textColorHint="@color/word_color_11"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/emailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/emailEditHint"
+                android:maxLines="1"
+                android:textColor="@color/word_color_2"
+                android:textColorHint="@color/word_color_11"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/verificationCode"
+            android:textColor="@color/grey"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/validateCode"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/verificationCodeEditHint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/word_color_2"
+                android:textColorHint="@color/word_color_11"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/getVerificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:onClick="getVerificationCode"
+                android:text="@string/getVerificationCode"
+                android:textColor="@color/blue"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line_style"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp" />
+
+        <LinearLayout
+            android:id="@+id/invitationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/invitationCodeTip"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/invitationCode"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/invitationCodeEditHint"
+                android:importantForAutofill="no"
+                android:inputType="textVisiblePassword"
+                android:letterSpacing="0.5"
+                android:maxLength="6"
+                android:textColor="@color/word_color_2"
+                android:textColorHint="@color/word_color_11"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                style="@style/line_style"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/nextBtn"
+            style="@style/button_style_normal"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:enabled="false"
+            android:onClick="registerNext"
+            android:text="@string/next"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="startLogin"
+            android:paddingTop="20dp"
+            android:text="@string/goToLogin"
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userAgreementText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/icon_register_logo" />
+
+    <TextView
+        android:id="@+id/userAgreementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userAgreementLayout"
+        android:layout_centerHorizontal="true"
+        android:text="@string/userAgreementOne"
+        android:textColor="@color/word_color_5"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/userAgreementLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userAgreementTwo"
+            android:textColor="@color/word_color_5"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showAgreement"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/confidentialityAgreement"
+            android:textColor="@color/blue_agreement"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

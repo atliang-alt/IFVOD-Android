@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/noLocation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp">
+
+        <ImageView
+            android:id="@+id/noLocationImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:padding="10dp"
+            android:src="@mipmap/check_box_spot_selected"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:text="@string/noShowLocation"
+            android:textColor="@color/grey_4"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/noLocationLine"
+        style="@style/line_style"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <RelativeLayout
+        android:id="@+id/oldLocation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/oldLocationImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="2dp"
+            android:padding="10dp"
+            android:src="@mipmap/check_box_spot_selected"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/oldLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:layout_toStartOf="@id/oldLocationImg"
+            android:textColor="@color/grey_4"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/oldLocationLine"
+        style="@style/line_style"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

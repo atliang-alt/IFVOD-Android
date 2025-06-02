@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="216dp">
+
+    <ImageView
+        android:id="@+id/picture_cover"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/pictures_cover_default"
+        android:scaleType="centerCrop" />
+</RelativeLayout>

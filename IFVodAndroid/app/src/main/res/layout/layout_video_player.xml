@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1">
+
+    <FrameLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.cqcsy.lgsp.video.danmaku.ClickDanmakuView
+        android:id="@+id/danmakuView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/rightContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/screenCut"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="15dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_video_screenshot"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/lock_screen"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_unlock"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vertical_shot_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rightContent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/shot_image"
+            android:layout_width="90dp"
+            android:layout_height="150dp"
+            android:background="@color/black_2"
+            android:padding="5dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:background="@color/transparent_50"
+            android:gravity="center"
+            android:text="@string/shot_cut_success"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/image_player_thumb"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/centerStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/icon_play_transparent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_video_loading"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_video_advertisement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/errorContent"
+        layout="@layout/layout_video_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/replayContent"
+        layout="@layout/layout_replay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/layout_video_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/vertical_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_above="@id/layout_bottom"
+        android:layout_below="@id/topContent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_transform_50_corner_4"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/layout_video_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <!--<ProgressBar
+        android:id="@+id/bottom_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progressDrawable="@drawable/progress_dp2_white_30"
+        android:visibility="gone" />-->
+
+    <!-- <include
+         android:id="@+id/netTips"
+         layout="@layout/layout_player_net_tip"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:visibility="gone" />-->
+
+    <TextView
+        android:id="@+id/videoTopTip"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="9dp"
+        android:background="@color/transparent_50"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/grey_4"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/receive_coin_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_receive_coin_tip_bg"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:textColor="@color/black_1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</RelativeLayout>

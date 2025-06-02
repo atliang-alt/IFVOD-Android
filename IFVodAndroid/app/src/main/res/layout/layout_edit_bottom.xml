@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/background_6"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="clearAll"
+        android:text="@string/clear_all"
+        android:textColor="@color/word_color_3"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="24dp"
+        android:background="@color/divider_color" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="delete"
+        android:text="@string/delete"
+        android:textColor="@color/word_color_3"
+        android:textSize="16sp" />
+</LinearLayout>
