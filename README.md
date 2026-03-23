@@ -9,7 +9,7 @@
 
 1. 增加了在线观看
 2. 修复了BUG
-
+3. 修复了证书问题
 
 Telegram:
 ![photo](https://github.com/user-attachments/assets/eb7fa89a-209f-4e1b-a79a-67c5423f13a5)
